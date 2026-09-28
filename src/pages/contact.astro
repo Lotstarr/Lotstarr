@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { profile } from '../data/profile';
+
+const FORM_ENDPOINT = '';
+---
+
+<BaseLayout title="Contact" description="Contact Lot Holmstead about product, AI, technology, internships, collaboration, or professional opportunities.">
+  <section class="page-hero compact contact-hero">
+    <div class="container narrow">
+      <p class="eyebrow">Let’s connect</p>
+      <h1>Interested in working together?</h1>
+      <p class="page-intro">Whether you’re hiring for a product, technology, AI, or business role—or simply want to connect—I’d be glad to hear from you.</p>
+    </div>
+  </section>
+
+  <section class="section section-white contact-section">
+    <div class="container contact-grid">
+      <div class="contact-copy">
+        <p class="eyebrow">Start a conversation</p>
+        <h2>Tell me what you’re working on.</h2>
+        <p>Use the form or reach out directly. I typically respond by email.</p>
+        <div class="contact-list">
+          <a href={`mailto:${profile.email}`}><span>Email</span><strong>{profile.email}</strong></a>
+          <a href={`tel:${profile.phoneHref}`}><span>Phone</span><strong>{profile.phone}</strong></a>
+          <div><span>Based in</span><strong>{profile.location}</strong></div>
+        </div>
+        <div class="contact-socials">
+          <a href={profile.links.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          <a href={profile.links.github} target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a href={profile.links.handshake} target="_blank" rel="noreferrer">Handshake ↗</a>
+        </div>
+      </div>
+
+      <form class="contact-form" data-contact-form data-endpoint={FORM_ENDPOINT}>
+        <div class="field-row">
+          <label>Full name<input type="text" name="name" autocomplete="name" required /></label>
+          <label>Email address<input type="email" name="email" autocomplete="email" required /></label>
+        </div>
+        <label>Company or organization <span>Optional</span><input type="text" name="company" autocomplete="organization" /></label>
+        <label>What would you like to discuss?
+          <select name="reason" required>
+            <option value="">Select a topic</option>
+            <option>Job or internship opportunity</option>
+            <option>Project collaboration</option>
+            <option>Networking</option>
+            <option>Something else</option>
+          </select>
+        </label>
+        <label>Message<textarea name="message" rows="6" required placeholder="Share a few details..."></textarea></label>
+        <label class="honeypot" aria-hidden="true">Leave this field empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label>
+        <button class="button button-primary form-submit" type="submit">Send message</button>
+        <p class="form-status" role="status" data-form-status>Until the hosted form is connected, submitting will open a pre-addressed email draft.</p>
+      </form>
+    </div>
+  </section>
+
+  <script define:vars={{ email: profile.email }}>
+    const form = document.querySelector('[data-contact-form]');
+    const status = document.querySelector('[data-form-status]');
+    form?.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const data = new FormData(form);
+      if (data.get('_gotcha')) return;
+      const endpoint = form.dataset.endpoint;
+      const button = form.querySelector('button[type="submit"]');
+      button.disabled = true;
+      status.textContent = 'Preparing your message…';
+
+      if (!endpoint) {
+        const subject = encodeURIComponent(`${data.get('reason')} — website message from ${data.get('name')}`);
+        const body = encodeURIComponent(`Name: ${data.get('name')}\nEmail: ${data.get('email')}\nCompany: ${data.get('company') || 'Not provided'}\n\n${data.get('message')}`);
+        window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+        status.textContent = 'Your email app should open with the message prepared.';
+        button.disabled = false;
+        return;
+      }
+
+      try {
+        const response = await fetch(endpoint, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
+        if (!response.ok) throw new Error('Submission failed');
+        form.reset();
+        status.textContent = 'Thanks—your message was sent. I’ll be in touch soon.';
+      } catch {
+        status.innerHTML = `The form could not send. Please email <a href="mailto:${email}">${email}</a> instead.`;
+      } finally {
+        button.disabled = false;
+      }
+    });
+  </script>
+</BaseLayout>

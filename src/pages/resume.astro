@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Callout from '../components/Callout.astro';
+import { profile } from '../data/profile';
+---
+
+<BaseLayout title="Resume" description="View and download Lot Holmstead's resume, including education, experience, skills, projects, and contact information.">
+  <section class="page-hero compact resume-hero">
+    <div class="container narrow centered-copy">
+      <p class="eyebrow">Resume</p>
+      <h1>A concise view of my experience and education.</h1>
+      <p class="page-intro">View my current resume and find my professional profiles in one place.</p>
+      <div class="button-row centered-buttons">
+        <a class="button button-primary" href="/documents/Lot-Holmstead-Resume.pdf" download>Download PDF</a>
+        <a class="button button-secondary" href="/#experience">View experience</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-white resume-viewer-section">
+    <div class="container">
+      <div class="resume-toolbar">
+        <div><span>Current resume</span><strong>Updated September 2026</strong></div>
+        <a href="/documents/Lot-Holmstead-Resume.pdf" target="_blank">Open in a new tab ↗</a>
+      </div>
+      <div class="resume-frame">
+        <object data="/documents/Lot-Holmstead-Resume.pdf" type="application/pdf" title="Lot Holmstead resume PDF">
+          <div class="pdf-fallback">
+            <h2>PDF preview unavailable</h2>
+            <p>Your browser cannot display the resume inline.</p>
+            <a class="button button-primary" href="/documents/Lot-Holmstead-Resume.pdf">Open resume</a>
+          </div>
+        </object>
+      </div>
+      <div class="resume-contact-strip">
+        <a href={`mailto:${profile.email}`}>{profile.email}</a>
+        <a href={`tel:${profile.phoneHref}`}>{profile.phone}</a>
+        <a href={profile.links.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        <a href={profile.links.github} target="_blank" rel="noreferrer">GitHub ↗</a>
+        <a href={profile.links.handshake} target="_blank" rel="noreferrer">Handshake ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <Callout />
+</BaseLayout>

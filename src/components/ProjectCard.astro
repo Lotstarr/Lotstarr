@@ -1,0 +1,36 @@
+---
+import type { Project } from '../data/projects';
+
+interface Props {
+  project: Project;
+  large?: boolean;
+}
+
+const { project, large = false } = Astro.props;
+const statusClass = project.status.toLowerCase().replace(' ', '-');
+---
+
+<article class:list={['project-card', { large }] }>
+  <div class="project-visual" aria-hidden="true">
+    <span>{project.title.split(' ').map((word) => word[0]).join('').slice(0, 3)}</span>
+    <div class="project-orbit"></div>
+  </div>
+  <div class="project-body">
+    <div class="project-meta">
+      <span>{project.eyebrow}</span>
+      <span class:list={['status', statusClass]}>{project.status}</span>
+    </div>
+    <h3>{project.title}</h3>
+    <p>{project.summary}</p>
+    <div class="tag-list" aria-label="Project technologies">
+      {project.tags.map((tag) => <span>{tag}</span>)}
+    </div>
+    <p class="project-note">{project.detail}</p>
+    {project.outcome && <p class="project-outcome"><strong>Result:</strong> {project.outcome}</p>}
+    <div class="project-links">
+      {project.github && <a href={project.github} target="_blank" rel="noreferrer">GitHub ↗</a>}
+      {project.demo && <a href={project.demo} target="_blank" rel="noreferrer">Live demo ↗</a>}
+      {!project.github && !project.demo && <span>Links will be added as the project develops.</span>}
+    </div>
+  </div>
+</article>

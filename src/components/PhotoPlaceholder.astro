@@ -1,0 +1,20 @@
+---
+interface Props {
+  label: string;
+  note: string;
+  tall?: boolean;
+}
+
+const { label, note, tall = false } = Astro.props;
+---
+
+<div class:list={['photo-placeholder', { tall }] }>
+  <div class="placeholder-icon" aria-hidden="true">
+    <svg viewBox="0 0 48 48" role="img">
+      <path d="M8 12h8l3-4h10l3 4h8a4 4 0 0 1 4 4v22a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V16a4 4 0 0 1 4-4Z" />
+      <circle cx="24" cy="27" r="8" />
+    </svg>
+  </div>
+  <strong>{label}</strong>
+  <span>{note}</span>
+</div>

@@ -1,0 +1,29 @@
+---
+interface Props {
+  eyebrow?: string;
+  title?: string;
+  body?: string;
+}
+
+const {
+  eyebrow = 'Contact',
+  title = 'Want to get in touch?',
+  body = 'Reach out about an opportunity, a project, or just to say hello.',
+} = Astro.props;
+---
+
+<section class="section callout-section">
+  <div class="container">
+    <div class="callout">
+      <div>
+        <p class="eyebrow">{eyebrow}</p>
+        <h2>{title}</h2>
+        <p>{body}</p>
+      </div>
+      <div class="callout-actions">
+        <a class="button button-white" href="/contact/">Get in touch</a>
+        <a class="button button-ghost-light" href="/resume/">View resume</a>
+      </div>
+    </div>
+  </div>
+</section>

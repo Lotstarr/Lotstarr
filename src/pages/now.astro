@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Callout from '../components/Callout.astro';
+import { projects } from '../data/projects';
+
+const activeProjects = projects.filter((project) => project.status !== 'Completed');
+---
+
+<BaseLayout title="Now" description="See what Lot Holmstead is currently studying, building, learning, and working toward.">
+  <section class="page-hero compact plain-page-hero">
+    <div class="container narrow">
+      <p class="eyebrow">What I’m up to</p>
+      <h1>What I’m working on right now.</h1>
+      <p class="page-intro">A current snapshot of school, work, projects, and the opportunities I’m working toward. Last updated September 2026.</p>
+    </div>
+  </section>
+
+  <section class="section section-white now-section">
+    <div class="container now-list">
+      <article>
+        <span class="now-number">01</span>
+        <div><p class="card-kicker">School</p><h2>BYU Information Systems</h2><p>I’m in the junior core studying product management, databases, web development, and cloud systems. My goal is to understand both how technology works and how teams decide what to build.</p></div>
+      </article>
+      <article>
+        <span class="now-number">02</span>
+        <div><p class="card-kicker">Work</p><h2>EZsalt</h2><p>I’m working in sales development, talking with prospective customers, managing work in HubSpot, and improving research and follow-up processes with AI tools.</p></div>
+      </article>
+      <article>
+        <span class="now-number">03</span>
+        <div>
+          <p class="card-kicker">Building</p><h2>Current projects</h2>
+          <div class="now-projects">
+            {activeProjects.map((project) => (
+              <div><span>{project.status}</span><h3>{project.title}</h3><p>{project.summary}</p><div class="tag-list">{project.tags.map((tag) => <span>{tag}</span>)}</div></div>
+            ))}
+          </div>
+        </div>
+      </article>
+      <article>
+        <span class="now-number">04</span>
+        <div><p class="card-kicker">Looking ahead</p><h2>Summer 2027 internship</h2><p>I’m working toward an internship where I can contribute to product, AI, consulting, automation, analytics, or another role that connects business needs with technology. I’m especially interested in teams that give interns meaningful ownership and strong mentorship.</p></div>
+      </article>
+      <article>
+        <span class="now-number">05</span>
+        <div><p class="card-kicker">Long term</p><h2>Build products and companies</h2><p>I want to grow into product leadership, learn how strong companies are built, and eventually start or help lead businesses of my own.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <Callout eyebrow="Opportunities" title="Think I could be a fit for your team?" body="I’d be happy to learn more about the work, the team, and what you need." />
+</BaseLayout>
