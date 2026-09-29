@@ -22,7 +22,7 @@ I'm an Information Systems student at Brigham Young University's Marriott School
 
 This repository is both my GitHub profile repository and the Astro source for my personal portfolio. The site will be published at [lotholmstead.com](https://lotholmstead.com).
 
-- [View my resume](./public/documents/Lot-Holmstead-Resume.pdf)
+- [View my resume](./public/documents/Lot-Holmstead-Resume-2026.pdf)
 - [Website setup and maintenance notes](./WEBSITE_DEVELOPMENT.md)
 
 ## Connect

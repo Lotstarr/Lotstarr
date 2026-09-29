@@ -29,7 +29,7 @@ pnpm preview
 - Completed and current projects: `src/data/projects.ts`
 - Page copy: `src/pages/`
 - Photos: `public/images/`
-- Resume: `public/documents/Lot-Holmstead-Resume.pdf`
+- Resume: `public/documents/Lot-Holmstead-Resume-2026.pdf`
 
 ## Contact form
 

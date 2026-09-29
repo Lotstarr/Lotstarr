@@ -109,7 +109,7 @@ If Cloudflare already has CAA records, at least one must permit `letsencrypt.org
    - `http://lotholmstead.com` redirects to HTTPS;
    - `https://www.lotholmstead.com` redirects to the canonical domain;
    - `/about/`, `/now/`, `/resume/`, and `/contact/` load;
-   - `/documents/Lot-Holmstead-Resume.pdf` opens; and
+   - `/documents/Lot-Holmstead-Resume-2026.pdf` opens; and
    - navigation and the mobile menu work.
 6. Ask Codex to run the final DNS, HTTPS, redirect, link, mobile, and Lighthouse checks.
 

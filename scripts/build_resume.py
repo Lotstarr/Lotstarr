@@ -17,7 +17,7 @@ from reportlab.platypus import (
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / "public" / "documents" / "Lot-Holmstead-Resume.pdf"
+OUTPUT = ROOT / "public" / "documents" / "Lot-Holmstead-Resume-2026.pdf"
 
 NAVY = HexColor("#13293A")
 BLUE = HexColor("#2F6B8E")
