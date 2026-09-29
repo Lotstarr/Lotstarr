@@ -1,30 +1,28 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import PhotoPlaceholder from '../components/PhotoPlaceholder.astro';
 import Callout from '../components/Callout.astro';
 ---
 
 <BaseLayout title="About" description="Get to know Lot Holmstead—his background, family, mission in the Philippines, hobbies, and interests outside work and school.">
   <section class="about-mountain-hero">
-    <div class="mountain-layer mountain-far"></div>
-    <div class="mountain-layer mountain-near"></div>
+    <img class="about-mountain-photo" src="/images/utah-mountains.webp" alt="" width="547" height="365" decoding="async" fetchpriority="high" />
     <div class="container about-hero-content">
-      <p class="eyebrow">About me</p>
-      <h1>I’m Lot Holmstead.</h1>
-      <p>Student, husband, builder, and outdoors enthusiast from Utah.</p>
-      <span class="image-note">Mount Timpanogos photography will replace this mountain placeholder.</span>
+      <h1>Outside work and school.</h1>
+      <p>Family, friends, faith, and the outdoors.</p>
     </div>
   </section>
 
   <section class="section section-white">
     <div class="container story-grid simple-story">
-      <div class="story-photo"><PhotoPlaceholder label="A photo of me" note="A natural portrait or Jeep photo will go here." tall /></div>
+      <figure class="story-photo story-photo-real">
+        <img src="/images/lot-casual-portrait.webp" alt="Lot Holmstead standing outdoors while traveling." width="1200" height="1600" loading="lazy" decoding="async" />
+      </figure>
       <div class="story-copy">
-        <p class="eyebrow">A little about me</p>
+        <p class="eyebrow">Background</p>
         <h2>I like learning how things work and finding better ways to do them.</h2>
-        <p>I live in Springville, Utah, with my wife and attend Brigham Young University in Provo. I’m studying Information Systems because it brings together several things I enjoy: technology, business, people, and problem solving.</p>
-        <p>I’m interested in product management, startups, AI, automation, and entrepreneurship. I’m also still early in that path. Right now, I’m focused on learning, building projects, meeting good people, and getting experience on strong teams.</p>
-        <p>Outside school and work, I would rather be doing something active—snowboarding, dirt biking, boating, hiking, golfing, traveling, or spending time with family.</p>
+        <p>I currently live in Provo, Utah. I’m studying Information Systems because I love technology and AI, especially learning how I can use these tools to help others.</p>
+        <p>My main academic interests are AI, technology startups, and product management. Right now, I’m focused on learning, building projects, building my network, and gaining experience with strong teams. I enjoy trying out new AI tools and having fun with technology.</p>
+        <p>Outside of school and work, I enjoy spending time snowboarding, dirt biking, and being outdoors with my wife, friends, and family.</p>
       </div>
     </div>
   </section>
@@ -33,14 +31,24 @@ import Callout from '../components/Callout.astro';
     <div class="container simple-section-heading">
       <p class="eyebrow">Life outside work</p>
       <h2>The people and places that matter to me.</h2>
-      <p class="heading-note">These placeholders are mapped to the exact photos you plan to send.</p>
+      <p class="heading-note">A few snapshots from life outside school and work.</p>
     </div>
     <div class="container personal-gallery">
-      <div class="gallery-wide"><PhotoPlaceholder label="Snowboarding" note="Snowboarding photo" tall /></div>
-      <PhotoPlaceholder label="Dirt biking" note="Dirt biking photo" />
-      <PhotoPlaceholder label="My Jeep" note="Photo in or with the Jeep" />
-      <div class="gallery-wide"><PhotoPlaceholder label="My wife and me" note="Wedding photo" tall /></div>
-      <PhotoPlaceholder label="The Philippines" note="Mission photo" />
+      <figure class="gallery-photo gallery-feature photo-dirt-bike">
+        <img src="/images/lot-dirt-biking.webp" alt="Lot paused on an orange dirt bike on a mountain trail." width="1800" height="2400" loading="lazy" decoding="async" />
+      </figure>
+      <figure class="gallery-photo photo-snowboarding">
+        <img src="/images/lot-snowboarding.webp" alt="Lot standing with his snowboard at a snowy mountain resort." width="828" height="826" loading="lazy" decoding="async" />
+      </figure>
+      <figure class="gallery-photo photo-jeep">
+        <img src="/images/lot-jeep-outdoors.webp" alt="Lot standing beside a Jeep with a companion on a mountain trail." width="1200" height="1793" loading="lazy" decoding="async" />
+      </figure>
+      <figure class="gallery-photo gallery-feature photo-wedding">
+        <img src="/images/lot-wedding.webp" alt="Lot and his wife smiling together on their wedding day." width="1200" height="1800" loading="lazy" decoding="async" />
+      </figure>
+      <figure class="gallery-photo photo-philippines">
+        <img src="/images/lot-mission-philippines.webp" alt="" width="1600" height="1200" loading="lazy" decoding="async" />
+      </figure>
     </div>
   </section>
 
@@ -48,11 +56,12 @@ import Callout from '../components/Callout.astro';
     <div class="container mission-grid">
       <div>
         <p class="eyebrow">The Philippines</p>
-        <h2>Two years of service changed how I see people and responsibility.</h2>
-        <p>From August 2022 to August 2024, I served as a missionary for The Church of Jesus Christ of Latter-day Saints in the Philippines.</p>
-        <p>I learned Tagalog, trained other missionaries, worked in unfamiliar environments, and met people with backgrounds very different from mine. It taught me patience, resilience, confidence, and how important it is to listen before trying to help.</p>
+        <h2>Missionary service in the Philippines.</h2>
+        <p>From August 2022 to August 2024, I served as a missionary for The Church of Jesus Christ of Latter-day Saints. I learned Tagalog and had opportunities to train and lead other missionaries.</p>
       </div>
-      <PhotoPlaceholder label="Mission in the Philippines" note="A favorite mission photo will replace this." />
+      <figure class="mission-photo">
+        <img src="/images/lot-mission-philippines.webp" alt="Lot serving as a missionary in the Philippines beside the shoreline." width="1600" height="1200" loading="lazy" decoding="async" />
+      </figure>
     </div>
   </section>
 

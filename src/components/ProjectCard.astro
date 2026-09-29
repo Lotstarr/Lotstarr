@@ -11,10 +11,6 @@ const statusClass = project.status.toLowerCase().replace(' ', '-');
 ---
 
 <article class:list={['project-card', { large }] }>
-  <div class="project-visual" aria-hidden="true">
-    <span>{project.title.split(' ').map((word) => word[0]).join('').slice(0, 3)}</span>
-    <div class="project-orbit"></div>
-  </div>
   <div class="project-body">
     <div class="project-meta">
       <span>{project.eyebrow}</span>

@@ -122,7 +122,7 @@ Sections:
 
 1. Mount Timpanogos or Rocky Mountain hero background
 2. Brief personal story
-3. Photo gallery: snowboarding, dirt biking, Jeep, wedding, and Philippines mission
+3. Photo gallery: snowboarding, dirt biking, Jeep/outdoors, wedding, and Philippines mission
 4. Philippines mission story
 
 Until real photos are supplied, use clearly labeled, tasteful image placeholders with recommended shot descriptions.
@@ -135,8 +135,8 @@ Sections:
 
 1. Current BYU coursework
 2. Current work at EZsalt
-3. In-progress work: IS Career Launchpad
-4. Ideas being explored: Starrboard
+3. In-progress work: Athlete Recruiting Platform and Software Startup Simulation
+4. Completed work: IS Career Launchpad and Starrboard
 5. Skills currently being learned
 6. Summer 2027 internship target
 7. Long-term product and entrepreneurship goals
@@ -181,7 +181,7 @@ Public details:
 - LinkedIn: https://www.linkedin.com/in/lot-h/
 - Handshake: https://app.joinhandshake.com/profiles/lotholmstead
 - GitHub: https://github.com/Lotstarr
-- Location: Springville / Provo, Utah area
+- Location: Provo, Utah
 
 Use direct email and phone actions beneath the form so visitors always have an alternative. The first version should submit through a managed static-form endpoint such as Formspree because GitHub Pages cannot process server-side form code. The final provider account and endpoint must belong to Lot, deliver messages to `lotstarr@gmail.com`, restrict submissions to the production domain where supported, and include spam filtering. Never place a private API key in the public repository.
 

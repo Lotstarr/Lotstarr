@@ -2,11 +2,12 @@ export const profile = {
   name: 'Lot Holmstead',
   shortName: 'Lot',
   email: 'lotstarr@gmail.com',
+  schoolEmail: 'lotstarr@byu.edu',
   phone: '435-255-2229',
   phoneHref: '+14352552229',
-  location: 'Springville, Utah',
+  location: 'Provo, Utah',
   school: 'Brigham Young University',
-  program: 'Information Systems — Marriott School of Business',
+  program: 'Bachelor of Science in Information Systems — Marriott School of Business',
   graduation: 'Expected April 2028',
   role: 'Information Systems student at Brigham Young University.',
   headline: 'Student, builder, and future product leader.',
@@ -35,6 +36,6 @@ export const skills = [
   },
   {
     title: 'Technology',
-    items: ['JavaScript', 'HTML & CSS', 'Python', 'SQL', 'GitHub', 'HubSpot'],
+    items: ['JavaScript', 'HTML & CSS', 'Python fundamentals', 'SQL', 'GitHub', 'HubSpot'],
   },
 ];

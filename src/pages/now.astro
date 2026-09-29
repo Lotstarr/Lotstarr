@@ -7,11 +7,11 @@ const activeProjects = projects.filter((project) => project.status !== 'Complete
 ---
 
 <BaseLayout title="Now" description="See what Lot Holmstead is currently studying, building, learning, and working toward.">
-  <section class="page-hero compact plain-page-hero">
+  <section class="page-hero compact plain-page-hero now-page-hero">
+    <img class="now-hero-photo" src="/images/byu-campus-now.webp" alt="" width="1200" height="799" decoding="async" fetchpriority="high" />
     <div class="container narrow">
-      <p class="eyebrow">What I’m up to</p>
       <h1>What I’m working on right now.</h1>
-      <p class="page-intro">A current snapshot of school, work, projects, and the opportunities I’m working toward. Last updated September 2026.</p>
+      <p class="page-intro">Here’s what I’m currently doing at school and work, what I’m building, and what I’m working toward. Updated September 2026.</p>
     </div>
   </section>
 
@@ -19,11 +19,11 @@ const activeProjects = projects.filter((project) => project.status !== 'Complete
     <div class="container now-list">
       <article>
         <span class="now-number">01</span>
-        <div><p class="card-kicker">School</p><h2>BYU Information Systems</h2><p>I’m in the junior core studying product management, databases, web development, and cloud systems. My goal is to understand both how technology works and how teams decide what to build.</p></div>
+        <div><p class="card-kicker">School</p><h2>BYU Information Systems</h2><p>I’m in the junior core studying product management, databases, web development, and cloud systems. I’m also a teaching assistant for IS 581: Managing a Software Startup, where I review student projects, help run activities, provide feedback, grade coursework, and help develop the Software Startup Simulation.</p></div>
       </article>
       <article>
         <span class="now-number">02</span>
-        <div><p class="card-kicker">Work</p><h2>EZsalt</h2><p>I’m working in sales development, talking with prospective customers, managing work in HubSpot, and improving research and follow-up processes with AI tools.</p></div>
+        <div><p class="card-kicker">Work</p><h2>EZsalt</h2><p>EZsalt is a SaaS startup with a team of about 10 people, which gives me the opportunity to contribute beyond a typical sales role. I talk directly with prospective customers, help the team understand what they need, and use HubSpot, AI, and automation to improve how we research accounts and manage outreach. Because the company is small, I also get to contribute as we test new technology and adjust our processes.</p></div>
       </article>
       <article>
         <span class="now-number">03</span>
@@ -38,14 +38,14 @@ const activeProjects = projects.filter((project) => project.status !== 'Complete
       </article>
       <article>
         <span class="now-number">04</span>
-        <div><p class="card-kicker">Looking ahead</p><h2>Summer 2027 internship</h2><p>I’m working toward an internship where I can contribute to product, AI, consulting, automation, analytics, or another role that connects business needs with technology. I’m especially interested in teams that give interns meaningful ownership and strong mentorship.</p></div>
+        <div><p class="card-kicker">Looking ahead</p><h2>Summer 2027 internship</h2><p>For summer 2027, I’m looking for product management internships. Right now, I’m also interested in technical experience where I can keep learning and contribute to a team.</p></div>
       </article>
       <article>
         <span class="now-number">05</span>
-        <div><p class="card-kicker">Long term</p><h2>Build products and companies</h2><p>I want to grow into product leadership, learn how strong companies are built, and eventually start or help lead businesses of my own.</p></div>
+        <div><p class="card-kicker">Long term</p><h2>Product management and entrepreneurship</h2><p>Long term, I’d like to work in product management, learn how tech companies are built, and eventually start a company of my own.</p></div>
       </article>
     </div>
   </section>
 
-  <Callout eyebrow="Opportunities" title="Think I could be a fit for your team?" body="I’d be happy to learn more about the work, the team, and what you need." />
+  <Callout eyebrow="Opportunities" title="Have an opportunity I should know about?" body="Send me a message. I’d be glad to learn more about it." />
 </BaseLayout>

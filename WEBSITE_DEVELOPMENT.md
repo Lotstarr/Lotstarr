@@ -2,6 +2,7 @@
 
 Personal resume and portfolio website for Lot Holmstead.
 
+The current remaining-work plan is tracked in [`PROJECT_TODO.md`](./PROJECT_TODO.md).
 The current requirements and launch status are tracked in [`BYU_PORTFOLIO_CHECKLIST.md`](./BYU_PORTFOLIO_CHECKLIST.md).
 The GitHub Pages and Cloudflare walkthrough is in [`HOSTING_SETUP.md`](./HOSTING_SETUP.md).
 

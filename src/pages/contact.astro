@@ -9,17 +9,17 @@ const FORM_ENDPOINT = '';
   <section class="page-hero compact contact-hero">
     <div class="container narrow">
       <p class="eyebrow">Let’s connect</p>
-      <h1>Interested in working together?</h1>
-      <p class="page-intro">Whether you’re hiring for a product, technology, AI, or business role—or simply want to connect—I’d be glad to hear from you.</p>
+      <h1>Get in touch.</h1>
+      <p class="page-intro">If you have a question about my work or want to discuss an internship or project, send me a message.</p>
     </div>
   </section>
 
   <section class="section section-white contact-section">
     <div class="container contact-grid">
       <div class="contact-copy">
-        <p class="eyebrow">Start a conversation</p>
-        <h2>Tell me what you’re working on.</h2>
-        <p>Use the form or reach out directly. I typically respond by email.</p>
+        <p class="eyebrow">Contact</p>
+        <h2>Send me a message.</h2>
+        <p>Use the form below or email me directly.</p>
         <div class="contact-list">
           <a href={`mailto:${profile.email}`}><span>Email</span><strong>{profile.email}</strong></a>
           <a href={`tel:${profile.phoneHref}`}><span>Phone</span><strong>{profile.phone}</strong></a>
@@ -49,8 +49,8 @@ const FORM_ENDPOINT = '';
         </label>
         <label>Message<textarea name="message" rows="6" required placeholder="Share a few details..."></textarea></label>
         <label class="honeypot" aria-hidden="true">Leave this field empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label>
-        <button class="button button-primary form-submit" type="submit">Send message</button>
-        <p class="form-status" role="status" data-form-status>Until the hosted form is connected, submitting will open a pre-addressed email draft.</p>
+        <button class="button button-primary form-submit" type="submit">{FORM_ENDPOINT ? 'Send message' : 'Prepare email'}</button>
+        <p class="form-status" role="status" data-form-status>{FORM_ENDPOINT ? 'Your message will be sent securely through this form.' : 'This will open a prepared message in your default email app for you to review and send.'}</p>
       </form>
     </div>
   </section>
