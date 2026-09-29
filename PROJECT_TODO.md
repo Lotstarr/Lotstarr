@@ -137,10 +137,10 @@ Completion test: every completed project has credible evidence and no concept is
 
 ## Phase 5 — Activate the contact form
 
-- [ ] **Lot:** Create a Formspree form named `Lot Holmstead Website`.
+- [x] **Lot:** Create a Formspree form named `Lot Holmstead Website`.
 - [ ] **Lot:** Set delivery to `lotstarr@gmail.com` and complete email verification.
-- [ ] **Lot:** Send Codex only the public endpoint resembling `https://formspree.io/f/xxxxxxxx`.
-- [ ] **Codex:** Add the endpoint to `FORM_ENDPOINT` in `src/pages/contact.astro`.
+- [x] **Lot:** Send Codex only the public endpoint resembling `https://formspree.io/f/xxxxxxxx`.
+- [x] **Codex:** Add the endpoint to `FORM_ENDPOINT` in `src/pages/contact.astro`.
 - [ ] **Codex:** Preserve direct email and phone alternatives.
 - [ ] **Codex:** Test required-field validation and the honeypot.
 - [ ] **Together:** Submit a real production test and confirm the message arrives.

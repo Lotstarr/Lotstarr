@@ -33,7 +33,7 @@ pnpm preview
 
 ## Contact form
 
-The form currently opens a pre-addressed email draft. Before launch, create a Formspree form owned by Lot, then replace `FORM_ENDPOINT` in `src/pages/contact.astro` with the production endpoint.
+The form submits through Lot's Formspree endpoint and displays success or failure feedback without leaving the page. If the hosted service is ever removed, clearing `FORM_ENDPOINT` in `src/pages/contact.astro` restores the pre-addressed email fallback.
 
 ## Deployment
 
