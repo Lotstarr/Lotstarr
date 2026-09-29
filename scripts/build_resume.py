@@ -241,10 +241,10 @@ def build():
     story.append(
         KeepTogether(
             [
-                heading("Athlete Recruiting Platform - Developer", "SaaS recruiting profile platform", "2026 - Present"),
+                heading("Personal Portfolio Website", "Astro website deployed at lotholmstead.com", "2026"),
                 *bullets(
                     [
-                        "Building shareable athlete profiles that organize athletic statistics, academics, highlight videos, contact information, event calendars, and college-coach outreach."
+                        "Designed, built, and deployed a responsive personal portfolio using Astro, HTML, CSS, JavaScript, GitHub Actions, GitHub Pages, a custom domain, and a Formspree contact workflow."
                     ]
                 ),
             ]
@@ -298,8 +298,7 @@ def build():
     )
     story.append(
         Paragraph(
-            "Learned Tagalog, trained and led other missionaries, and developed cross-cultural communication, resilience, and self-direction. "
-            "Eagle Scout, Boy Scouts of America.",
+            "Learned Tagalog, trained and led other missionaries, and developed cross-cultural communication, resilience, and self-direction.",
             body_style,
         )
     )
