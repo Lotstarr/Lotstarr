@@ -14,6 +14,19 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: 'Personal Portfolio Website',
+    slug: 'personal-portfolio-website',
+    status: 'Completed',
+    eyebrow: 'Developer · Personal portfolio',
+    summary: 'A responsive portfolio website for my experience, projects, resume, and current work.',
+    detail:
+      'I designed, built, and deployed this Astro site with GitHub Actions, GitHub Pages, a custom domain, and a contact form.',
+    tags: ['Astro', 'GitHub Actions', 'GitHub Pages', 'Responsive design'],
+    featured: true,
+    github: 'https://github.com/Lotstarr/Lotstarr',
+    demo: 'https://lotholmstead.com',
+  },
+  {
     title: 'IS Career Launchpad',
     slug: 'is-career-launchpad',
     status: 'Completed',
@@ -32,23 +45,23 @@ export const projects: Project[] = [
     slug: 'starrboard',
     status: 'Completed',
     eyebrow: 'Developer · AI academic platform',
-    summary: 'An AI-powered academic command center that brings assignments, calendars, notes, textbooks, and course platforms into one intelligent dashboard.',
+    summary: 'An AI-assisted academic command center that brings school deadlines, reading plans, and tasks into one daily view.',
     detail:
-      'As the developer, I focused on AI, automation, full-stack development, product design, and API integrations. Starrboard helps students prioritize work, manage deadlines, understand their workload, and plan when and what to study.',
-    outcome: 'Completed and published a working demo with a public GitHub repository.',
-    tags: ['AI', 'Automation', 'Full-stack development', 'Product design', 'API integrations'],
+      'I developed a private app with API integrations and a public fictional demo using Next.js, React, and TypeScript. The command center helps students organize their workload and plan what to study.',
+    outcome: 'Published a fictional demo with a public GitHub repository; the private app is separate from the demo.',
+    tags: ['Next.js', 'React', 'TypeScript', 'AI', 'API integrations'],
     featured: true,
     github: 'https://github.com/Lotstarr/starrboard-demo',
     demo: 'https://starrboard-demo.vercel.app',
   },
   {
-    title: 'Athlete Recruiting Platform',
+    title: 'notawalkon',
     slug: 'athlete-recruiting-platform',
     status: 'In progress',
-    eyebrow: 'Developer',
-    summary: 'A SaaS platform that helps high school athletes create professional, shareable recruiting profiles.',
+    eyebrow: 'Founder · In development',
+    summary: 'Recruiting websites for high-school athletes, bringing stats, highlight film, schedules, and coach contact information into one profile.',
     detail:
-      'Profiles bring athletic stats, academics, highlight videos, contact information, and event calendars into one place. The platform is designed to help athletes and their families organize recruiting information, present it to college coaches, and manage outreach.',
+      'As the founder, I’m developing a way for athletes and their families to organize recruiting information and share it with college coaches.',
     tags: ['SaaS', 'Web development', 'Athlete profiles', 'College recruiting'],
     featured: true,
   },

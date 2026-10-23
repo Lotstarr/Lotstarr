@@ -5,10 +5,12 @@ export const profile = {
   schoolEmail: 'lotstarr@byu.edu',
   phone: '435-255-2229',
   phoneHref: '+14352552229',
-  location: 'Provo, Utah',
+  location: 'Orem, Utah',
   school: 'Brigham Young University',
   program: 'Bachelor of Science in Information Systems — Marriott School of Business',
   graduation: 'Expected April 2028',
+  gpa: '3.62',
+  resumeUrl: '/documents/Lot-Holmstead-Resume-2026-10-13.pdf',
   role: 'Information Systems student at Brigham Young University.',
   headline: 'Student, builder, and future product leader.',
   links: {
@@ -31,11 +33,11 @@ export const skills = [
     items: ['Generative AI', 'Workflow automation', 'AI-assisted research', 'Prompt engineering'],
   },
   {
-    title: 'Product & Business',
-    items: ['Product discovery', 'Business process analysis', 'Sales operations', 'Customer success'],
+    title: 'Customer',
+    items: ['Customer training', 'Technical troubleshooting', 'Customer check-ins', 'HubSpot', 'Business process analysis'],
   },
   {
     title: 'Technology',
-    items: ['JavaScript', 'HTML & CSS', 'Python fundamentals', 'SQL', 'GitHub', 'HubSpot'],
+    items: ['JavaScript', 'HTML', 'CSS', 'Python', 'SQL', 'GitHub', 'API integrations', 'Excel', 'Data analysis'],
   },
 ];

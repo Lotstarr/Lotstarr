@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import Callout from '../components/Callout.astro';
-import { profile } from '../data/profile';
+import { profile, skills } from '../data/profile';
 import { projects } from '../data/projects';
 
 const completedProjects = projects.filter((project) => project.status === 'Completed');
@@ -14,7 +14,7 @@ const completedProjects = projects.filter((project) => project.status === 'Compl
       <div class="hero-copy reveal">
         <p class="eyebrow">Lot Holmstead</p>
         <h1>Information Systems student at BYU.</h1>
-        <p class="hero-intro">I’m a junior at BYU studying Information Systems. I currently work at a tech startup called EZsalt, and I’m interested in product management, AI, and tech startups.</p>
+        <p class="hero-intro">I’m an Information Systems student at BYU who uses AI and automation to improve how teams sell to and support customers. At EZsalt, I support customer accounts and build AI-assisted workflows that save our three-person team more than an hour a day. I also serve as a teaching assistant for IS 581: Managing a Software Startup.</p>
         <p class="hero-details">
           <span><strong>Target:</strong> Product management internships in 2027 and technical experience opportunities now</span>
           <span><strong>Graduating:</strong> April 2028</span>
@@ -52,18 +52,20 @@ const completedProjects = projects.filter((project) => project.status === 'Compl
     </div>
     <div class="container simple-timeline">
       <article>
-        <div class="timeline-date">2026 — Present</div>
+        <div class="timeline-date">Mar 2026 — Present</div>
         <div>
           <p class="card-kicker">Work</p>
           <h3 class="timeline-title">
-            <span>Sales Development Representative</span>
+            <span>Sales Development and Customer Success</span>
             <small>EZsalt · SaaS Startup</small>
           </h3>
-          <p>EZsalt is a SaaS startup with a team of about 10 people, so my role extends beyond traditional sales development. I work directly with prospective customers, bring their questions and needs back to the team, and help improve the technology and processes we use as the company grows.</p>
+          <p>At EZsalt, a small SaaS startup, I work across sales development and customer success. I help customers use the product, resolve technical questions, and improve the workflows our team relies on.</p>
           <ul class="plain-results">
-            <li>Automated 75% of follow-up workflows in HubSpot.</li>
-            <li>Use AI-assisted research and automation to save more than one hour daily across a three-person sales team.</li>
-            <li>Research 300+ accounts weekly, average two meetings generated per day, and share customer feedback as the product and sales process evolve.</li>
+            <li>Support about 100 customer accounts through weekly check-ins, product questions, and technical troubleshooting to help customers keep using and renewing their plans.</li>
+            <li>Coordinate customer training meetings and work with customer success management to address concerns and reach solutions.</li>
+            <li>Automated 75% of follow-up workflows in HubSpot, improving CRM consistency and cutting repetitive admin.</li>
+            <li>Cut meeting prep from 5–10 minutes to 1–2 minutes with AI research and recap workflows, saving more than one hour daily across a three-person sales team.</li>
+            <li>Research 300+ prospect accounts weekly with AI-assisted tools and generate an average of two meetings daily through calls, visits, and email sequences.</li>
           </ul>
         </div>
       </article>
@@ -75,11 +77,11 @@ const completedProjects = projects.filter((project) => project.status === 'Compl
             <span>Teaching Assistant</span>
             <small>IS 581: Managing a Software Startup · BYU Marriott School of Business</small>
           </h3>
-          <p>I review student projects, help run class activities, provide feedback, grade coursework, and help develop the Software Startup Simulation.</p>
+          <p>I review student projects, give feedback, and grade coursework on managing a software startup. I also help develop the Software Startup Simulation, which teaches validated learning through product, technical, marketing, and resource decisions.</p>
         </div>
       </article>
       <article>
-        <div class="timeline-date">Expected 2028</div>
+        <div class="timeline-date">Expected Apr 2028</div>
         <div>
           <p class="card-kicker">Education</p>
           <h3 class="timeline-title">
@@ -87,15 +89,15 @@ const completedProjects = projects.filter((project) => project.status === 'Compl
             <small>Brigham Young University · BYU Marriott School of Business</small>
           </h3>
           <p>My coursework includes databases, web development, and cloud systems. I’m also taking electives in AI, product development, and software startups.</p>
-          <p class="subtle-detail">Association for Information Systems</p>
+          <p class="subtle-detail">GPA: {profile.gpa} · Association for Information Systems</p>
         </div>
       </article>
       <article>
-        <div class="timeline-date">2022 — 2024</div>
+        <div class="timeline-date">Aug 2022 — Aug 2024</div>
         <div>
           <p class="card-kicker">Service</p>
-          <h3>Full-Time Missionary · Philippines</h3>
-          <p>I learned Tagalog, trained other missionaries, worked with local communities, and developed stronger communication, leadership, and self-direction.</p>
+          <h3 class="timeline-title"><span>Full-Time Missionary · Philippines</span><small>The Church of Jesus Christ of Latter-day Saints</small></h3>
+          <p>I learned Tagalog, trained and led other missionaries, and built cross-cultural communication, resilience, and self-direction.</p>
         </div>
       </article>
     </div>
@@ -113,6 +115,24 @@ const completedProjects = projects.filter((project) => project.status === 'Compl
     <div class="container current-work-note">
       <p><strong>See what I’m building currently.</strong> Projects I’m still working on are listed on my Now page.</p>
       <a class="button button-secondary" href="/now/">What I’m up to</a>
+    </div>
+  </section>
+
+  <section class="section section-white skills-section">
+    <div class="container skills-layout">
+      <div>
+        <p class="eyebrow">Skills</p>
+        <h2>Tools and experience I bring to a team.</h2>
+      </div>
+      <div class="skill-stack">
+        {skills.map((group, index) => (
+          <article>
+            <span class="skill-number">{String(index + 1).padStart(2, '0')}</span>
+            <h3>{group.title}</h3>
+            <div class="tag-list">{group.items.map((item) => <span>{item}</span>)}</div>
+          </article>
+        ))}
+      </div>
     </div>
   </section>
 

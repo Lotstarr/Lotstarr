@@ -1,16 +1,18 @@
 # Lot Holmstead
 
-I'm an Information Systems student at Brigham Young University's Marriott School of Business. I currently work at EZsalt, a small SaaS startup, and serve as a teaching assistant for IS 581: Managing a Software Startup.
+I'm an Information Systems student at Brigham Young University's Marriott School of Business. I work in sales development and customer success at EZsalt, using AI and automation to improve team workflows while supporting about 100 customer accounts. I also serve as a teaching assistant for IS 581: Managing a Software Startup.
 
 - Expected graduation: April 2028
-- Based in Provo, Utah
+- Based in Orem, Utah
+- GPA: 3.62
 - Seeking Summer 2027 product management and technical-business internships
 
 ## What I'm working on
 
 - [IS Career Launchpad](https://github.com/Lotstarr/Team-308-IS-Core-Case) — A career-path experience for students exploring Information Systems. [View the live project](https://lotstarr.github.io/Team-308-IS-Core-Case/).
-- [Starrboard](https://github.com/Lotstarr/starrboard-demo) — An AI-powered academic command center for organizing coursework and planning what to study. [View the live project](https://starrboard-demo.vercel.app).
-- **Athlete Recruiting Platform** — An in-progress SaaS product for creating and sharing organized athlete recruiting profiles.
+- [Starrboard](https://github.com/Lotstarr/starrboard-demo) — An AI-assisted academic command center with a private app and a public fictional demo built with Next.js, React, and TypeScript. [View the public demo](https://starrboard-demo.vercel.app).
+- [Personal Portfolio Website](https://lotholmstead.com) — A responsive Astro site deployed with GitHub Actions, GitHub Pages, a custom domain, and a contact form.
+- **notawalkon — Founder (in development)** — Recruiting websites for high-school athletes with stats, highlight film, schedules, and coach contact information in one profile.
 
 ## Featured work
 
@@ -20,9 +22,9 @@ I'm an Information Systems student at Brigham Young University's Marriott School
 
 ## Personal website
 
-This repository is both my GitHub profile repository and the Astro source for my personal portfolio. The site will be published at [lotholmstead.com](https://lotholmstead.com).
+This repository is both my GitHub profile repository and the Astro source for my personal portfolio, live at [lotholmstead.com](https://lotholmstead.com).
 
-- [View my resume](./public/documents/Lot-Holmstead-Resume-2026.pdf)
+- [View my resume](./public/documents/Lot-Holmstead-Resume-2026-10-13.pdf)
 - [Website setup and maintenance notes](./WEBSITE_DEVELOPMENT.md)
 
 ## Connect
