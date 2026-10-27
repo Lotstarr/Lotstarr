@@ -4,6 +4,7 @@ import { profile } from '../data/profile';
 const pathname = Astro.url.pathname;
 const links = [
   { href: '/', label: 'Home' },
+  { href: '/#projects', label: 'Projects' },
   { href: '/about/', label: 'About' },
   { href: '/now/', label: 'Now' },
   { href: '/resume/', label: 'Resume' },
@@ -23,7 +24,7 @@ const links = [
     </button>
     <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation" data-nav>
       {links.map((link) => (
-        <a href={link.href} aria-current={pathname === link.href ? 'page' : undefined}>{link.label}</a>
+        <a href={link.href} aria-current={pathname === link.href || (link.label === 'Projects' && pathname.startsWith('/projects/')) ? 'page' : undefined}>{link.label}</a>
       ))}
     </nav>
   </div>
@@ -36,5 +37,11 @@ const links = [
     const open = button.getAttribute('aria-expanded') === 'true';
     button.setAttribute('aria-expanded', String(!open));
     nav?.classList.toggle('is-open', !open);
+  });
+  nav?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      button?.setAttribute('aria-expanded', 'false');
+      nav.classList.remove('is-open');
+    });
   });
 </script>

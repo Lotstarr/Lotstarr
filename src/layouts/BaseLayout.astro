@@ -2,15 +2,17 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
+import '../styles/portfolio.css';
 import { profile } from '../data/profile';
 
 interface Props {
   title: string;
   description: string;
   image?: string;
+  bodyClass?: string;
 }
 
-const { title, description, image = '/favicon.svg' } = Astro.props;
+const { title, description, image = '/favicon.svg', bodyClass = 'portfolio-v2' } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const fullTitle = title === profile.name ? title : `${title} | ${profile.name}`;
 ---
@@ -32,7 +34,7 @@ const fullTitle = title === profile.name ? title : `${title} | ${profile.name}`;
     <meta name="twitter:card" content="summary_large_image" />
     <title>{fullTitle}</title>
   </head>
-  <body>
+  <body class={bodyClass}>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <Header />
     <main id="main-content">

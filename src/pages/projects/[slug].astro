@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Callout from '../../components/Callout.astro';
+import { projects } from '../../data/projects';
+
+export function getStaticPaths() {
+  return projects.filter((project) => project.featured && project.evidence).map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const evidence = project.evidence!;
+const sections = [
+  ['The problem', evidence.problem],
+  ['My role', evidence.role],
+  ['A product decision', evidence.decision],
+  ['What was checked', evidence.validation],
+  ['What the evidence shows', project.outcome],
+  ['Limits', evidence.limitations],
+  ['Next validation step', evidence.nextStep],
+];
+---
+
+<BaseLayout title={project.title} description={project.summary} image={evidence.image}>
+  <section class="page-hero compact project-hero">
+    <div class="container narrow">
+      <a class="text-link" href="/#projects">← All selected projects</a>
+      <p class="eyebrow">{project.eyebrow}</p>
+      <h1>{project.title}</h1>
+      <p class="page-intro">{project.summary}</p>
+      <div class="tag-list">{project.tags.map((tag) => <span>{tag}</span>)}</div>
+      <div class="button-row">
+        {project.demo && <a class="button button-primary" href={project.demo} target="_blank" rel="noreferrer">{project.demoLabel ?? 'Open live site'} ↗</a>}
+        {project.github && <a class="button button-secondary" href={project.github} target="_blank" rel="noreferrer">View source ↗</a>}
+        {project.caseStudy && <a class="button button-secondary" href={project.caseStudy} target="_blank" rel="noreferrer">Read full case study ↗</a>}
+      </div>
+    </div>
+  </section>
+  <section class="section section-white project-evidence">
+    <div class="container">
+      <figure class="project-figure">
+        <img src={evidence.image} alt={evidence.imageAlt} width="1440" height="1000" decoding="async" />
+        <figcaption>Screenshot captured October 27, 2026.{project.demoLabel === 'Fictional demo' && ' All records shown are fictional.'}</figcaption>
+      </figure>
+      <div class="evidence-sections">
+        {sections.map(([heading, body]) => (
+          <section>
+            <h2>{heading}</h2>
+            <p>{body}</p>
+          </section>
+        ))}
+      </div>
+    </div>
+  </section>
+  <Callout eyebrow="Discuss the work" title="Want to talk through a project?" body="I’m happy to explain the implementation, tradeoffs, and what I would test next." />
+</BaseLayout>

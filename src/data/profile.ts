@@ -29,6 +29,14 @@ export const impact = [
 
 export const skills = [
   {
+    title: 'Product',
+    items: ['Problem definition', 'Product design', 'Prototyping', 'Feature prioritization'],
+  },
+  {
+    title: 'Problem Solving',
+    items: ['Breaking down complex problems', 'Technical troubleshooting', 'Process improvement', 'Testing and iteration'],
+  },
+  {
     title: 'AI & Automation',
     items: ['Generative AI', 'Workflow automation', 'AI-assisted research', 'Prompt engineering'],
   },

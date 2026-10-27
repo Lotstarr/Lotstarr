@@ -1,18 +1,20 @@
 # Lot Holmstead
 
-I'm an Information Systems student at Brigham Young University's Marriott School of Business. I work in sales development and customer success at EZsalt, using AI and automation to improve team workflows while supporting about 100 customer accounts. I also serve as a teaching assistant for IS 581: Managing a Software Startup.
+I'm an Information Systems student at Brigham Young University's Marriott School of Business. I work in business development and customer success at EZsalt, using AI and automation to improve team workflows while supporting about 100 customer accounts. I also serve as a teaching assistant for IS 581: Managing a Software Startup.
 
 - Expected graduation: April 2028
 - Based in Orem, Utah
 - GPA: 3.62
-- Seeking Summer 2027 product management and technical-business internships
+- My last day at EZsalt is October 30, 2026; I start as an Intern at Redo on November 2, 2026.
+- Seeking product management and tech startup roles, including Summer 2027 internships
 
 ## What I'm working on
 
 - [IS Career Launchpad](https://github.com/Lotstarr/Team-308-IS-Core-Case) — A career-path experience for students exploring Information Systems. [View the live project](https://lotstarr.github.io/Team-308-IS-Core-Case/).
 - [Starrboard](https://github.com/Lotstarr/starrboard-demo) — An AI-assisted academic command center with a private app and a public fictional demo built with Next.js, React, and TypeScript. [View the public demo](https://starrboard-demo.vercel.app).
 - [Personal Portfolio Website](https://lotholmstead.com) — A responsive Astro site deployed with GitHub Actions, GitHub Pages, a custom domain, and a contact form.
-- **notawalkon — Founder (in development)** — Recruiting websites for high-school athletes with stats, highlight film, schedules, and coach contact information in one profile.
+- **Custom Athlete Websites — Founder, flagship project** — Recruiting websites for high-school athletes. [See a live athlete website](https://tyholmstead.com). The broader platform is in development.
+- [Cougar Crossing](https://cougar-crossing.onrender.com) — A BYU-themed browser game I built and published.
 
 ## Featured work
 

@@ -23,7 +23,7 @@ const activeProjects = projects.filter((project) => project.status !== 'Complete
       </article>
       <article>
         <span class="now-number">02</span>
-        <div><p class="card-kicker">Work</p><h2>Sales Development and Customer Success at EZsalt</h2><p>At this small SaaS startup, I support about 100 customer accounts through weekly check-ins, product questions, and technical troubleshooting. I coordinate customer training and work with customer success management to resolve concerns. Alongside that work, I use HubSpot and AI-assisted workflows to automate follow-up, shorten meeting prep, and research prospective customers.</p></div>
+        <div><p class="card-kicker">Work</p><h2>Business Development and Customer Success at EZsalt</h2><p>At this small SaaS startup, I support about 100 customer accounts through weekly check-ins, product questions, and technical troubleshooting. I coordinate customer training and work with customer success management to resolve concerns. Alongside that work, I use HubSpot and AI-assisted workflows to automate follow-up, shorten meeting prep, and research prospective customers.</p><p>My last day at EZsalt is October 30, 2026. I’ll start as an Intern at Redo on November 2, 2026.</p></div>
       </article>
       <article>
         <span class="now-number">03</span>
@@ -31,14 +31,14 @@ const activeProjects = projects.filter((project) => project.status !== 'Complete
           <p class="card-kicker">Building</p><h2>Current projects</h2>
           <div class="now-projects">
             {activeProjects.map((project) => (
-              <div><span>{project.status}</span><h3>{project.title}</h3><p>{project.summary}</p><div class="tag-list">{project.tags.map((tag) => <span>{tag}</span>)}</div></div>
+              <div id={project.slug}><span>{project.status}</span><h3>{project.title}</h3><p>{project.summary}</p><div class="tag-list">{project.tags.map((tag) => <span>{tag}</span>)}</div></div>
             ))}
           </div>
         </div>
       </article>
       <article>
         <span class="now-number">04</span>
-        <div><p class="card-kicker">Looking ahead</p><h2>Summer 2027 internship</h2><p>For summer 2027, I’m looking for product management internships. Right now, I’m also interested in technical experience where I can keep learning and contribute to a team.</p></div>
+        <div><p class="card-kicker">Looking ahead</p><h2>Product management and tech startup roles</h2><p>I’m looking for product management internships for summer 2027 and opportunities at tech startups where I can help understand customer needs, build products, and test ideas.</p></div>
       </article>
       <article>
         <span class="now-number">05</span>
