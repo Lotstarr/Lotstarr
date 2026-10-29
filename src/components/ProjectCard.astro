@@ -29,12 +29,19 @@ const statusClass = project.status.toLowerCase().replace(' ', '-');
     </div>
     {!compact && <p class="project-note">{project.detail}</p>}
     {!compact && project.outcome && <p class="project-outcome"><strong>Evidence:</strong> {project.outcome}</p>}
-    <div class="project-links">
-      {project.evidence && <a href={`/projects/${project.slug}/`}>Project details →</a>}
-      {project.caseStudy && <a href={project.caseStudy} target="_blank" rel="noreferrer">Case study ↗</a>}
-      {project.github && <a href={project.github} target="_blank" rel="noreferrer">GitHub ↗</a>}
-      {project.demo && <a href={project.demo} target="_blank" rel="noreferrer">{project.demoLabel ?? 'Live site'} ↗</a>}
-      {!project.github && !project.demo && <span>Links will be added as the project develops.</span>}
-    </div>
+    {compact ? (
+      ['cougar-crossing', 'starrboard'].includes(project.slug) && <div class="project-links project-action-links">
+        {project.slug === 'starrboard' && project.github && <a href={project.github} target="_blank" rel="noreferrer">GitHub ↗</a>}
+        {project.demo && <a href={project.demo} target="_blank" rel="noreferrer">{project.demoLabel ?? 'Live site'} ↗</a>}
+      </div>
+    ) : (
+      <div class="project-links">
+        {project.evidence && <a href={`/projects/${project.slug}/`}>Project details →</a>}
+        {project.caseStudy && <a href={project.caseStudy} target="_blank" rel="noreferrer">Case study ↗</a>}
+        {project.github && <a href={project.github} target="_blank" rel="noreferrer">GitHub ↗</a>}
+        {project.demo && <a href={project.demo} target="_blank" rel="noreferrer">{project.demoLabel ?? 'Live site'} ↗</a>}
+        {!project.github && !project.demo && <span>Links will be added as the project develops.</span>}
+      </div>
+    )}
   </div>
 </article>

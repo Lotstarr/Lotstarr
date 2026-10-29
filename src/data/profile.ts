@@ -10,7 +10,7 @@ export const profile = {
   program: 'Bachelor of Science in Information Systems — Marriott School of Business',
   graduation: 'Expected April 2028',
   gpa: '3.62',
-  resumeUrl: '/documents/Lot-Holmstead-Resume-2026-10-13.pdf',
+  resumeUrl: '/documents/Lot-Holmstead-Resume-2026-10-29.pdf',
   role: 'Information Systems student at Brigham Young University.',
   headline: 'Student, builder, and future product leader.',
   links: {
