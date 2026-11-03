@@ -1,51 +1,12 @@
----
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Callout from '../components/Callout.astro';
-import { projects } from '../data/projects';
-
-const activeProjects = projects.filter((project) => project.status !== 'Completed');
----
-
-<BaseLayout title="Now" description="See what Lot Holmstead is currently studying, building, learning, and working toward.">
-  <section class="page-hero compact plain-page-hero now-page-hero">
-    <img class="now-hero-photo" src="/images/byu-campus-now.webp" alt="" width="1200" height="799" decoding="async" fetchpriority="high" />
-    <div class="container narrow">
-      <h1>What I’m working on right now.</h1>
-      <p class="page-intro">Here’s what I’m currently doing at school and work, what I’m building, and what I’m working toward. Updated October 2026.</p>
-    </div>
-  </section>
-
-  <section class="section section-white now-section">
-    <div class="container now-list">
-      <article>
-        <span class="now-number">01</span>
-        <div><p class="card-kicker">School</p><h2>BYU Information Systems</h2><p>I’m pursuing a Bachelor of Science in Information Systems at BYU’s Marriott School of Business, with graduation expected in April 2028. I’m also a teaching assistant for IS 581: Managing a Software Startup, where I review student projects, give feedback, grade coursework, and help develop the Software Startup Simulation.</p></div>
-      </article>
-      <article>
-        <span class="now-number">02</span>
-        <div><p class="card-kicker">Work</p><h2>Business Development and Customer Success at EZsalt</h2><p>At this small SaaS startup, I support about 100 customer accounts through weekly check-ins, product questions, and technical troubleshooting. I coordinate customer training and work with customer success management to resolve concerns. Alongside that work, I use HubSpot and AI-assisted workflows to automate follow-up, shorten meeting prep, and research prospective customers.</p><p>My last day at EZsalt is October 30, 2026. I’ll start as an Intern at Redo on November 2, 2026.</p></div>
-      </article>
-      <article>
-        <span class="now-number">03</span>
-        <div>
-          <p class="card-kicker">Building</p><h2>Current projects</h2>
-          <div class="now-projects">
-            {activeProjects.map((project) => (
-              <div id={project.slug}><span>{project.status}</span><h3>{project.title}</h3><p>{project.summary}</p><div class="tag-list">{project.tags.map((tag) => <span>{tag}</span>)}</div></div>
-            ))}
-          </div>
-        </div>
-      </article>
-      <article>
-        <span class="now-number">04</span>
-        <div><p class="card-kicker">Looking ahead</p><h2>Product management and tech startup roles</h2><p>I’m looking for product management internships for summer 2027 and opportunities at tech startups where I can help understand customer needs, build products, and test ideas.</p></div>
-      </article>
-      <article>
-        <span class="now-number">05</span>
-        <div><p class="card-kicker">Long term</p><h2>Product management and entrepreneurship</h2><p>Long term, I’d like to work in product management, learn how tech companies are built, and eventually start a company of my own.</p></div>
-      </article>
-    </div>
-  </section>
-
-  <Callout eyebrow="Opportunities" title="Have an opportunity I should know about?" body="Send me a message. I’d be glad to learn more about it." />
-</BaseLayout>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <meta http-equiv="refresh" content="0;url=/#experience" />
+    <link rel="canonical" href="https://lotholmstead.com/#experience" />
+    <title>Experience | Lot Holmstead</title>
+  </head>
+  <body><p>Current experience has moved to the <a href="/#experience">homepage</a>.</p></body>
+</html>

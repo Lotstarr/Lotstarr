@@ -3,9 +3,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import FlagshipVisual from '../components/FlagshipVisual.astro';
 import ProfileIcon from '../components/ProfileIcon.astro';
+import AboutSection from '../components/AboutSection.astro';
+import ContactForm from '../components/ContactForm.astro';
 import { profile, skills } from '../data/profile';
 import { projects } from '../data/projects';
 const flagship = projects.find(project => project.slug === 'athlete-recruiting-platform')!;
+const simulation = projects.find(project => project.slug === 'software-startup-simulation')!;
 
 const otherProjects = projects
   .filter((project) => project.status === 'Completed' && project.featured && project.slug !== 'personal-portfolio-website')
@@ -20,7 +23,7 @@ const otherProjects = projects
           <h1>Lot Holmstead</h1>
           <div class="intro-position"><p class="intro-program">BYU Information Systems</p><p class="intro-focus">Product management <span aria-hidden="true">/</span> Tech startups</p></div>
           <div class="intro-bottom"><p>SEEKING <strong>Product management &amp; tech startup roles</strong></p><p>GRADUATING <strong>April 2028</strong></p></div>
-          <a class="button button-primary intro-contact-button" href="/contact/">Contact Me</a>
+          <a class="button button-primary intro-contact-button" href="/#contact">Contact Me</a>
           <div class="intro-profile-links" aria-label="Resume and professional profiles"><a href="/resume/" aria-label="View my resume" title="Resume"><ProfileIcon name="resume" /></a><a href={profile.links.linkedin} target="_blank" rel="noreferrer" aria-label="Visit my LinkedIn profile (opens in a new tab)" title="LinkedIn"><ProfileIcon name="linkedin" /></a><a href={profile.links.github} target="_blank" rel="noreferrer" aria-label="Visit my GitHub profile (opens in a new tab)" title="GitHub"><ProfileIcon name="github" /></a></div>
         </div>
         <figure class="intro-portrait"><img src="/images/lot-headshot.webp" alt="Professional portrait of Lot Holmstead." width="1000" height="1500" fetchpriority="high" decoding="async" /></figure>
@@ -40,7 +43,7 @@ const otherProjects = projects
     </div>
   </section>
 
-  <section class="other-work-section"><div class="container"><div class="project-grid home-project-grid">{otherProjects.map(project => <ProjectCard project={project} compact />)}</div></div></section>
+  <section class="other-work-section"><div class="container"><div class="project-grid home-project-grid">{otherProjects.map(project => <ProjectCard project={project} compact />)}</div><div class="current-projects-note"><span>IN PROGRESS</span><h3>{simulation.title}</h3><p>{simulation.summary}</p></div></div></section>
 
   <section class="experience-v2" id="experience">
     <div class="container">
@@ -56,6 +59,6 @@ const otherProjects = projects
   </section>
 
   <section class="toolkit-v2"><div class="container"><div class="toolkit-layout"><h2>Skills</h2><div>{skills.map(group=><article><h3>{group.title}</h3><p>{group.items.join(' / ')}</p></article>)}</div></div></div></section>
-  <section class="personal-v2"><div class="container personal-v2-grid"><img src="/images/lot-snowboarding.webp" alt="Lot standing with his snowboard at a snowy mountain resort." width="828" height="826" loading="lazy" /><div><h2>Outside work.</h2><p>Snowboarding, dirt biking, and time outdoors with my wife, friends, and family.</p><a class="arrow-link" href="/about/">About me <span>↗</span></a></div></div></section>
-  <section class="contact-v2"><div class="container"><h2>Let’s connect.</h2><div><a href="/contact/">Contact form ↗</a></div></div></section>
+  <AboutSection />
+  <ContactForm />
 </BaseLayout>
