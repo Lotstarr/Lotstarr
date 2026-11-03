@@ -12,9 +12,23 @@ interface Props {
   bodyClass?: string;
 }
 
-const { title, description, image = '/favicon.svg', bodyClass = 'portfolio-v2' } = Astro.props;
+const { title, description, image = '/images/social-card.png', bodyClass = 'portfolio-v2' } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const fullTitle = title === profile.name ? title : `${title} | ${profile.name}`;
+const socialImage = new URL(image, Astro.site);
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: profile.name,
+  url: Astro.site?.toString(),
+  image: new URL('/images/lot-headshot.webp', Astro.site).toString(),
+  email: `mailto:${profile.email}`,
+  telephone: profile.phone,
+  address: { '@type': 'PostalAddress', addressLocality: 'Orem', addressRegion: 'UT', addressCountry: 'US' },
+  alumniOf: { '@type': 'CollegeOrUniversity', name: profile.school },
+  sameAs: [profile.links.linkedin, profile.links.github],
+  knowsAbout: ['Product management', 'Technology startups', 'Information systems', 'Artificial intelligence', 'Web development'],
+};
 ---
 
 <!doctype html>
@@ -30,8 +44,13 @@ const fullTitle = title === profile.name ? title : `${title} | ${profile.name}`;
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:image" content={new URL(image, Astro.site)} />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:alt" content={`${profile.name} — product management, technology startups, and software projects`} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
     <title>{fullTitle}</title>
   </head>
   <body class={bodyClass}>

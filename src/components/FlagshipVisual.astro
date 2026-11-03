@@ -1,10 +1,11 @@
 ---
 interface Props {
   image: string;
+  imageSmall?: string;
 }
-const { image } = Astro.props;
+const { image, imageSmall } = Astro.props;
 ---
 
 <div class="flagship-visual">
-  <img src={image} alt="Ty Holmstead’s custom athlete recruiting website with baseball photography, film links, and coach navigation." width="1440" height="1000" loading="eager" decoding="async" />
+  <img src={image} srcset={imageSmall ? `${imageSmall} 720w, ${image} 1440w` : undefined} sizes="(max-width: 760px) calc(100vw - 36px), (max-width: 1240px) calc(100vw - 96px), 1240px" alt="Ty Holmstead’s custom athlete recruiting website with baseball photography, film links, and coach navigation." width="1440" height="1000" loading="lazy" decoding="async" />
 </div>

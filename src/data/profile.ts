@@ -42,14 +42,10 @@ export const skills = [
   },
   {
     title: 'AI Tools',
-    items: ['Codex', 'Google Antigravity', 'AI-assisted development', 'Workflow automation'],
+    items: ['Codex', 'Google Antigravity (AI coding)', 'AI-assisted development', 'Workflow automation'],
   },
   {
     title: 'Customer & Business',
     items: ['Customer training', 'Technical troubleshooting', 'Customer check-ins', 'HubSpot', 'Business process analysis', 'Excel', 'Data analysis'],
-  },
-  {
-    title: 'Certification',
-    items: ['Professional Scrum Master I (PSM I)', 'Scrum.org', 'October 2026'],
   },
 ];

@@ -13,6 +13,8 @@ const simulation = projects.find(project => project.slug === 'software-startup-s
 const otherProjects = projects
   .filter((project) => project.status === 'Completed' && project.featured && project.slug !== 'personal-portfolio-website')
   .sort((a, b) => (a.featuredOrder ?? 99) - (b.featuredOrder ?? 99));
+const primaryProjects = otherProjects.filter((project) => ['cougar-crossing', 'starrboard'].includes(project.slug));
+const earlierProjects = otherProjects.filter((project) => !['cougar-crossing', 'starrboard'].includes(project.slug));
 ---
 
 <BaseLayout title="Product Management & Tech Startups" bodyClass="portfolio-v2" description="Lot Holmstead is a BYU Information Systems student pursuing product management and tech startup roles. Explore his products, technical projects, experience, and resume.">
@@ -21,12 +23,12 @@ const otherProjects = projects
       <div class="intro-layout">
         <div class="intro-main">
           <h1>Lot Holmstead</h1>
-          <div class="intro-position"><p class="intro-program">BYU Information Systems</p><p class="intro-focus">Product management <span aria-hidden="true">/</span> Tech startups</p></div>
+          <div class="intro-position"><p class="intro-program">BYU Information Systems student building software products with AI.</p><p class="intro-focus">Product management <span aria-hidden="true">/</span> Customer problems <span aria-hidden="true">/</span> Tech startups</p></div>
           <div class="intro-bottom"><p>SEEKING <strong>Product management &amp; tech startup roles</strong></p><p>GRADUATING <strong>April 2028</strong></p></div>
           <a class="button button-primary intro-contact-button" href="/#contact">Contact Me</a>
           <div class="intro-profile-links" aria-label="Resume and professional profiles"><a href="/resume/" aria-label="View my resume" title="Resume"><ProfileIcon name="resume" /></a><a href={profile.links.linkedin} target="_blank" rel="noreferrer" aria-label="Visit my LinkedIn profile (opens in a new tab)" title="LinkedIn"><ProfileIcon name="linkedin" /></a><a href={profile.links.github} target="_blank" rel="noreferrer" aria-label="Visit my GitHub profile (opens in a new tab)" title="GitHub"><ProfileIcon name="github" /></a></div>
         </div>
-        <figure class="intro-portrait"><img src="/images/lot-headshot.webp" alt="Professional portrait of Lot Holmstead." width="1000" height="1500" fetchpriority="high" decoding="async" /></figure>
+        <figure class="intro-portrait"><img src="/images/lot-headshot.webp" srcset="/images/lot-headshot-480.webp 480w, /images/lot-headshot-720.jpg 720w, /images/lot-headshot.webp 1000w" sizes="350px" alt="Professional portrait of Lot Holmstead." width="1000" height="1500" fetchpriority="high" decoding="async" /></figure>
       </div>
     </div>
   </section>
@@ -35,21 +37,21 @@ const otherProjects = projects
   <section class="flagship-section">
     <div class="container">
       <div class="work-section-label"><span>FEATURED PROJECT</span><span>FOUNDER · DEVELOPER</span></div>
-      <a class="flagship-image-link" href="https://tyholmstead.com" target="_blank" rel="noreferrer" aria-label="View Ty Holmstead’s live athlete website (opens in a new tab)"><div class="flagship-browser"><span class="browser-dots" aria-hidden="true">● ● ●</span><span>tyholmstead.com</span><span>LIVE ATHLETE WEBSITE ↗</span></div><FlagshipVisual image="/images/projects/notawalkon.webp" /></a>
+      <a class="flagship-image-link" href="https://tyholmstead.com" target="_blank" rel="noreferrer" aria-label="View Ty Holmstead’s live athlete website (opens in a new tab)"><div class="flagship-browser"><span class="browser-dots" aria-hidden="true">● ● ●</span><span>tyholmstead.com</span><span>LIVE ATHLETE WEBSITE ↗</span></div><FlagshipVisual image="/images/projects/notawalkon.webp" imageSmall="/images/projects/notawalkon-720.webp" /></a>
       <div class="flagship-description">
         <div><h2>Custom Athlete<br />Websites</h2><div class="flagship-skills"><h3>Skills</h3><div class="tag-list" aria-label="Skills used in Custom Athlete Websites">{flagship.tags.map(tag=><span>{tag}</span>)}</div></div></div>
-        <div><p class="flagship-summary">Custom recruiting websites with athletic stats, highlight film, schedules, and coach contact information in one shareable profile.</p><a class="button button-primary flagship-visit" href="https://tyholmstead.com" target="_blank" rel="noreferrer">View live website <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5" /></svg><span class="sr-only"> (opens in a new tab)</span></a></div>
+        <div><p class="flagship-summary">Custom recruiting websites with athletic stats, highlight film, schedules, and coach contact information in one shareable profile.</p><div class="flagship-actions"><a class="button button-primary flagship-visit" href="https://tyholmstead.com" target="_blank" rel="noreferrer">View live website <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2-2v-5" /></svg><span class="sr-only"> (opens in a new tab)</span></a><a class="button button-secondary" href="/projects/athlete-recruiting-platform/">View product case study →</a></div></div>
       </div>
     </div>
   </section>
 
-  <section class="other-work-section"><div class="container"><div class="project-grid home-project-grid">{otherProjects.map(project => <ProjectCard project={project} compact />)}</div><div class="current-projects-note"><span>IN PROGRESS</span><h3>{simulation.title}</h3><p>{simulation.summary}</p></div></div></section>
+  <section class="other-work-section"><div class="container"><div class="project-grid home-project-grid">{primaryProjects.map(project => <ProjectCard project={project} compact />)}</div>{earlierProjects.length > 0 && <details class="earlier-projects"><summary>Earlier projects <span aria-hidden="true">+</span></summary><div class="project-grid home-project-grid">{earlierProjects.map(project => <ProjectCard project={project} compact />)}</div></details>}<div class="current-projects-note"><span>IN PROGRESS</span><h3>{simulation.title}</h3><p>{simulation.summary}</p></div></div></section>
 
   <section class="experience-v2" id="experience">
     <div class="container">
       <div class="work-section-label"><span>EXPERIENCE</span><a href="/resume/">FULL RESUME ↗</a></div>
       <div class="experience-v2-list">
-        <article><div class="experience-date">MAR 2026 — OCT 30, 2026</div><div><h3>Business Development &amp; Customer Success</h3><p class="experience-company">EZsalt · SaaS startup</p><p>I supported about 100 customer accounts through check-ins, training, and technical troubleshooting. I coordinated with customer success management to resolve concerns and used HubSpot and AI-assisted workflows to automate follow-up, prepare for meetings, and research prospective customers.</p><div class="experience-results"><span><strong>75%</strong> of follow-up workflows automated</span><span><strong>1+ hour</strong> saved daily across a three-person team</span></div><details><summary>More about the work</summary><ul><li>Coordinated customer training, weekly check-ins, and technical troubleshooting.</li><li>Cut meeting prep from 5–10 minutes to 1–2 minutes with AI research and recap workflows.</li><li>Researched 300+ prospect accounts weekly and generated an average of two meetings daily through calls, visits, and email sequences.</li></ul></details></div></article>
+        <article><div class="experience-date">MAR 2026 — OCT 2026</div><div><h3>Business Development &amp; Customer Success</h3><p class="experience-company">EZsalt · SaaS startup</p><p>I supported about 100 customer accounts through check-ins, training, and technical troubleshooting. I coordinated with customer success management to resolve concerns and used HubSpot and AI-assisted workflows to automate follow-up, prepare for meetings, and research prospective customers.</p><div class="experience-results"><span><strong>75%</strong> of follow-up workflows automated</span><span><strong>1+ hour</strong> saved daily across a three-person team</span></div><details><summary>More about the work</summary><ul><li>Coordinated customer training, weekly check-ins, and technical troubleshooting.</li><li>Cut meeting prep from 5–10 minutes to 1–2 minutes with AI research and recap workflows.</li><li>Researched 300+ prospect accounts weekly and generated an average of two meetings daily through calls, visits, and email sequences.</li></ul></details></div></article>
         <article><div class="experience-date">SEP 2026 — PRESENT</div><div><h3>Teaching Assistant</h3><p class="experience-company">IS 581: Managing a Software Startup · BYU</p><p>I review projects, give feedback, and grade coursework. I also help develop a Software Startup Simulation that teaches validated learning through product, technical, marketing, and resource decisions.</p></div></article>
         <article><div class="experience-date">EXPECTED APR 2028</div><div><h3>B.S. Information Systems</h3><p class="experience-company">Brigham Young University · Marriott School of Business</p><p>GPA: {profile.gpa} · Association for Information Systems</p><p>Coursework in databases, web development, and cloud systems, with electives in AI, product development, and software startups.</p></div></article>
         <article><div class="experience-date">AUG 2022 — AUG 2024</div><div><h3>Full-Time Missionary</h3><p class="experience-company">The Church of Jesus Christ of Latter-day Saints · Philippines</p><p>I learned Tagalog, trained and led other missionaries, and built cross-cultural communication, resilience, and self-direction.</p></div></article>
@@ -57,7 +59,7 @@ const otherProjects = projects
     </div>
   </section>
 
-  <section class="toolkit-v2"><div class="container"><div class="toolkit-layout"><h2>Skills</h2><div>{skills.map(group=><article><h3>{group.title}</h3><p>{group.items.join(' / ')}</p></article>)}</div></div></div></section>
+  <section class="toolkit-v2"><div class="container"><div class="toolkit-layout"><h2>Skills</h2><div>{skills.map(group=><article><h3>{group.title}</h3><p>{group.items.join(' / ')}</p></article>)}</div></div><div class="credential-v2"><div><span>Certification</span><strong>Professional Scrum Master I (PSM I)</strong><small>Scrum.org · October 2026</small></div><a href="/resume/">View on resume →</a></div></div></section>
   <AboutSection />
   <ContactForm />
 </BaseLayout>

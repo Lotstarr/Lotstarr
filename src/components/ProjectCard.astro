@@ -9,12 +9,13 @@ interface Props {
 
 const { project, large = false, compact = false } = Astro.props;
 const statusClass = project.status.toLowerCase().replace(' ', '-');
+const responsiveImage = project.evidence?.image.replace(/\.webp$/, '-720.webp');
 ---
 
 <article class:list={['project-card', { large }] }>
   {project.evidence && (
     <a class="project-screenshot" href={`/projects/${project.slug}/`} aria-label={`Explore ${project.title}`}>
-      <img src={project.evidence.image} alt={project.evidence.imageAlt} width="1440" height="1000" loading="lazy" decoding="async" />
+      <img src={project.evidence.image} srcset={`${responsiveImage} 720w, ${project.evidence.image} 1440w`} sizes="(max-width: 760px) calc(100vw - 56px), (max-width: 1240px) calc(50vw - 76px), 580px" alt={project.evidence.imageAlt} width="1440" height="1000" loading="lazy" decoding="async" />
     </a>
   )}
   <div class="project-body">
@@ -31,6 +32,7 @@ const statusClass = project.status.toLowerCase().replace(' ', '-');
     {!compact && project.outcome && <p class="project-outcome"><strong>Evidence:</strong> {project.outcome}</p>}
     {compact ? (
       ['cougar-crossing', 'starrboard'].includes(project.slug) && <div class="project-links project-action-links">
+        <a href={`/projects/${project.slug}/`}>View case study →</a>
         {project.slug === 'starrboard' && project.github && <a href={project.github} target="_blank" rel="noreferrer">GitHub ↗</a>}
         {project.demo && <a href={project.demo} target="_blank" rel="noreferrer">{project.demoLabel ?? 'Live site'} ↗</a>}
       </div>
