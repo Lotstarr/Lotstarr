@@ -37,15 +37,19 @@ export const skills = [
     items: ['Breaking down complex problems', 'Technical troubleshooting', 'Process improvement', 'Testing and iteration'],
   },
   {
-    title: 'AI & Automation',
-    items: ['Generative AI', 'Workflow automation', 'AI-assisted research', 'Prompt engineering'],
+    title: 'Development',
+    items: ['React', 'JavaScript', 'TypeScript', 'Next.js', 'Supabase', 'Vercel', 'HTML', 'CSS', 'Python', 'SQL', 'GitHub', 'API integrations'],
   },
   {
-    title: 'Customer',
-    items: ['Customer training', 'Technical troubleshooting', 'Customer check-ins', 'HubSpot', 'Business process analysis'],
+    title: 'AI Tools',
+    items: ['Codex', 'Google Antigravity', 'AI-assisted development', 'Workflow automation'],
   },
   {
-    title: 'Technology',
-    items: ['JavaScript', 'HTML', 'CSS', 'Python', 'SQL', 'GitHub', 'API integrations', 'Excel', 'Data analysis'],
+    title: 'Customer & Business',
+    items: ['Customer training', 'Technical troubleshooting', 'Customer check-ins', 'HubSpot', 'Business process analysis', 'Excel', 'Data analysis'],
+  },
+  {
+    title: 'Certification',
+    items: ['Professional Scrum Master I (PSM I)', 'Scrum.org', 'October 2026'],
   },
 ];

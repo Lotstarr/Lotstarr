@@ -45,6 +45,12 @@ def build() -> None:
                 b"484.8755 589 TD (Mar 2026 - Oct 2026)Tj",
                 "EZsalt date",
             )
+            data = replace_once(
+                data,
+                b"Building Athlete Websites - Founder \\(tyholmstead.com\\)",
+                b"Custom Athlete Websites - Founder \\(tyholmstead.com\\)",
+                "athlete project name",
+            )
             replacements_complete = True
 
         stream = DecodedStreamObject()
