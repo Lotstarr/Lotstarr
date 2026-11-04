@@ -16,10 +16,9 @@ const otherProjects = projects
 const primaryProjects = otherProjects.filter((project) => ['cougar-crossing', 'starrboard'].includes(project.slug));
 const earlierProjects = otherProjects.filter((project) => !['cougar-crossing', 'starrboard'].includes(project.slug));
 const capabilities = [
-  { step: '01', title: 'Discover', items: ['Customer problems', 'Product research', 'Feedback synthesis', 'Problem definition'] },
-  { step: '02', title: 'Design', items: ['Information architecture', 'Prototyping', 'Feature prioritization', 'Product strategy'] },
-  { step: '03', title: 'Build', items: ['Web products', 'AI workflows', 'API integrations', 'React & TypeScript'] },
-  { step: '04', title: 'Improve', items: ['Testing & iteration', 'Technical troubleshooting', 'Process improvement', 'Data analysis'] },
+  { step: '01', title: 'Product', items: ['User needs & feedback', 'Feature prioritization', 'Product discovery', 'Prototyping'] },
+  { step: '02', title: 'Technical', items: ['Web development', 'AI-assisted building', 'API integrations', 'SQL & databases'] },
+  { step: '03', title: 'Startup', items: ['Customer conversations', 'SaaS workflows', 'Process automation', 'Small-team collaboration'] },
 ];
 const productTools = ['Codex', 'Google Antigravity', 'React', 'TypeScript', 'Next.js', 'Supabase', 'GitHub', 'HubSpot'];
 ---
@@ -31,7 +30,7 @@ const productTools = ['Codex', 'Google Antigravity', 'React', 'TypeScript', 'Nex
       <div class="editorial-hero-grid">
         <div class="editorial-hero-copy">
           <p class="hero-name">LOT HOLMSTEAD <span>—</span> PRODUCT BUILDER</p>
-          <h1>I turn customer problems into useful digital products.</h1>
+          <h1>I turn problems into useful digital products.</h1>
           <p class="hero-deck">BYU Information Systems student working at the intersection of product management, AI, and technology startups.</p>
           <div class="hero-actions"><a class="button button-primary" href="/#projects">Explore selected work <span aria-hidden="true">↓</span></a><a class="hero-text-link" href="/resume/">View resume →</a></div>
           <div class="hero-meta"><p><span>SEEKING</span>Product management &amp; tech startup roles</p><p><span>GRADUATING</span>April 2028</p><p><span>BASED IN</span>Orem, Utah</p></div>
@@ -42,12 +41,11 @@ const productTools = ['Codex', 'Google Antigravity', 'React', 'TypeScript', 'Nex
     </div>
   </section>
 
-  <section class="projects-intro" id="projects" aria-labelledby="projects-title"><div class="container"><p class="section-kicker"><span>01</span> SELECTED WORK</p><div><h2 id="projects-title">Products shaped by real problems.</h2><p>Projects where I defined the need, designed the experience, and helped turn an idea into something people can use.</p></div></div></section>
+  <section class="projects-intro" id="projects" aria-labelledby="projects-title"><div class="container"><p class="section-kicker"><span>01</span> SELECTED WORK</p><div><h2 id="projects-title">Products shaped by real problems.</h2></div></div></section>
   <section class="flagship-section">
     <div class="container">
       <div class="work-section-label"><span>FEATURED PROJECT</span><span>FOUNDER · DEVELOPER</span></div>
       <a class="flagship-image-link" href="https://tyholmstead.com" target="_blank" rel="noreferrer" aria-label="View Ty Holmstead’s live athlete website (opens in a new tab)"><div class="flagship-browser"><span class="browser-dots" aria-hidden="true">● ● ●</span><span>tyholmstead.com</span><span>LIVE ATHLETE WEBSITE ↗</span></div><FlagshipVisual image="/images/projects/notawalkon.webp" imageSmall="/images/projects/notawalkon-720.webp" /></a>
-      <div class="flagship-detail-crops" aria-label="Selected interface details from the athlete website"><figure><img src="/images/projects/notawalkon.webp" alt="Athlete website film and coach controls." width="1440" height="1000" loading="lazy" /><figcaption>01 / FILM ACCESS</figcaption></figure><figure><img src="/images/projects/notawalkon.webp" alt="Athlete profile and recruiting story design." width="1440" height="1000" loading="lazy" /><figcaption>02 / ATHLETE STORY</figcaption></figure><figure><img src="/images/projects/notawalkon.webp" alt="Athletic statistics and recruiting information." width="1440" height="1000" loading="lazy" /><figcaption>03 / COACH VIEW</figcaption></figure></div>
       <div class="flagship-description">
         <div><h2>Custom Athlete<br />Websites</h2><div class="flagship-skills"><h3>Skills</h3><div class="tag-list" aria-label="Skills used in Custom Athlete Websites">{flagship.tags.map(tag=><span>{tag}</span>)}</div></div></div>
         <div><p class="flagship-summary">Custom recruiting websites with athletic stats, highlight film, schedules, and coach contact information in one shareable profile.</p><dl class="flagship-facts"><div><dt>Role</dt><dd>Founder &amp; Developer</dd></div><div><dt>Built for</dt><dd>High school athletes</dd></div><div><dt>Focus</dt><dd>Product design &amp; web development</dd></div></dl><div class="flagship-actions"><a class="button button-primary flagship-visit" href="https://tyholmstead.com" target="_blank" rel="noreferrer">View live website <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2-2v-5" /></svg><span class="sr-only"> (opens in a new tab)</span></a><a class="button button-secondary" href="/projects/athlete-recruiting-platform/">View product case study →</a></div></div>
@@ -70,12 +68,12 @@ const productTools = ['Codex', 'Google Antigravity', 'React', 'TypeScript', 'Nex
     </div>
   </section>
 
-  <section class="toolkit-v2"><div class="container"><div class="capability-heading"><p class="section-kicker"><span>03</span> CAPABILITIES</p><h2>How I move a product forward.</h2></div><div class="capability-matrix">{capabilities.map(column=><article><span>{column.step}</span><h3>{column.title}</h3><ul>{column.items.map(item=><li>{item}</li>)}</ul></article>)}</div><div class="tool-rail"><span>TOOLS I WORK WITH</span><div>{productTools.map(tool=><span>{tool}</span>)}</div></div><div class="credential-v2"><div><span>Certification</span><strong>Professional Scrum Master I (PSM I)</strong><small>Scrum.org · October 2026</small></div><a href="/resume/">View on resume →</a></div></div></section>
+  <section class="toolkit-v2"><div class="container"><div class="capability-heading"><p class="section-kicker"><span>03</span> SKILLS</p><h2>Skills I use and continue to build.</h2></div><div class="capability-matrix">{capabilities.map(column=><article><span>{column.step}</span><h3>{column.title}</h3><ul>{column.items.map(item=><li>{item}</li>)}</ul></article>)}</div><div class="tool-rail"><span>TOOLS I WORK WITH</span><div>{productTools.map(tool=><span>{tool}</span>)}</div></div><div class="credential-v2"><div><span>Certification</span><strong>Professional Scrum Master I (PSM I)</strong><small>Scrum.org · October 2026</small></div><a href="/resume/">View on resume →</a></div></div></section>
   <AboutSection />
   <ContactForm />
   <script>
     document.documentElement.classList.add('motion-ready');
-    const targets = document.querySelectorAll('main > section, .project-card, .experience-v2-list article, .flagship-detail-crops figure');
+    const targets = document.querySelectorAll('main > section, .project-card, .experience-v2-list article');
     targets.forEach((target) => target.classList.add('reveal-target'));
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
