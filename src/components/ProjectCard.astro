@@ -32,9 +32,7 @@ const responsiveImage = project.evidence?.image.replace(/\.webp$/, '-720.webp');
     {!compact && project.outcome && <p class="project-outcome"><strong>Evidence:</strong> {project.outcome}</p>}
     {compact ? (
       ['cougar-crossing', 'starrboard'].includes(project.slug) && <div class="project-links project-action-links">
-        <a href={`/projects/${project.slug}/`}>View case study →</a>
-        {project.slug === 'starrboard' && project.github && <a href={project.github} target="_blank" rel="noreferrer">GitHub ↗</a>}
-        {project.demo && <a href={project.demo} target="_blank" rel="noreferrer">{project.demoLabel ?? 'Live site'} ↗</a>}
+        {project.demo ? <a href={project.demo} target="_blank" rel="noreferrer">{project.demoLabel ?? 'View live project'} ↗</a> : <a href={`/projects/${project.slug}/`}>View case study →</a>}
       </div>
     ) : (
       <div class="project-links">
