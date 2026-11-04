@@ -1,36 +1,38 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Callout from '../components/Callout.astro';
 import { profile } from '../data/profile';
 ---
 
 <BaseLayout title="Resume" description="View and download Lot Holmstead's resume, including education, experience, skills, projects, and contact information.">
-  <section class="page-hero compact resume-hero">
-    <div class="container narrow centered-copy">
-      <p class="eyebrow">Resume</p>
-      <h1>A concise view of my experience and education.</h1>
-      <p class="page-intro">View my current resume and find my professional profiles in one place.</p>
-      <div class="button-row centered-buttons">
-        <a class="button button-primary" href={profile.resumeUrl} download>Download PDF</a>
-        <a class="button button-secondary" href="/#experience">View experience</a>
+  <section class="resume-intro">
+    <div class="container resume-intro-grid">
+      <div>
+        <p class="section-kicker"><span>01</span> RESUME</p>
+        <h1>Experience, education,<br />and selected work.</h1>
+        <p>A one-page overview of my work in SaaS, product development, teaching, and Information Systems.</p>
       </div>
+      <aside class="resume-action-card" aria-label="Resume actions">
+        <p><span>CURRENT VERSION</span><strong>Updated November 2026</strong></p>
+        <div>
+          <a class="button button-primary" href={profile.resumeUrl} target="_blank" rel="noreferrer">Open full screen ↗</a>
+          <a class="button button-secondary" href={profile.resumeUrl} download>Download PDF</a>
+        </div>
+        <a class="resume-experience-link" href="/#experience">View website experience →</a>
+      </aside>
     </div>
   </section>
 
-  <section class="section section-white resume-viewer-section">
-    <div class="container">
+  <section class="resume-document-section" aria-labelledby="resume-document-title">
+    <div class="container resume-document-container">
       <div class="resume-toolbar">
-        <div><span>Current resume</span><strong>Updated November 2026</strong></div>
-        <a href={profile.resumeUrl} target="_blank" rel="noreferrer">Open in a new tab ↗</a>
+        <div><span id="resume-document-title">LOT HOLMSTEAD</span><strong>Professional resume · One page</strong></div>
+        <div class="resume-toolbar-actions"><a href={profile.resumeUrl} download>Download ↓</a><a href={profile.resumeUrl} target="_blank" rel="noreferrer">Open full screen ↗</a></div>
       </div>
-      <div class="resume-frame">
-        <object data={profile.resumeUrl} type="application/pdf" title="Lot Holmstead resume PDF">
-          <div class="pdf-fallback">
-            <h2>PDF preview unavailable</h2>
-            <p>Your browser cannot display the resume inline.</p>
-            <a class="button button-primary" href={profile.resumeUrl}>Open resume</a>
-          </div>
-        </object>
+      <div class="resume-preview">
+        <a href={profile.resumeUrl} target="_blank" rel="noreferrer" aria-label="Open Lot Holmstead’s resume as a full-screen PDF">
+          <img src="/images/resume-preview.jpg" alt="Preview of Lot Holmstead’s one-page resume." width="1020" height="1320" />
+          <span>Open full-screen PDF ↗</span>
+        </a>
       </div>
       <div class="resume-contact-strip">
         <a href={`mailto:${profile.email}`}>{profile.email}</a>
@@ -41,6 +43,4 @@ import { profile } from '../data/profile';
       </div>
     </div>
   </section>
-
-  <Callout />
 </BaseLayout>
