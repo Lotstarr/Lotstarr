@@ -5,7 +5,7 @@ import FlagshipVisual from '../components/FlagshipVisual.astro';
 import ProfileIcon from '../components/ProfileIcon.astro';
 import AboutSection from '../components/AboutSection.astro';
 import ContactForm from '../components/ContactForm.astro';
-import { profile, skills } from '../data/profile';
+import { profile } from '../data/profile';
 import { projects } from '../data/projects';
 const flagship = projects.find(project => project.slug === 'athlete-recruiting-platform')!;
 const simulation = projects.find(project => project.slug === 'software-startup-simulation')!;
@@ -15,33 +15,44 @@ const otherProjects = projects
   .sort((a, b) => (a.featuredOrder ?? 99) - (b.featuredOrder ?? 99));
 const primaryProjects = otherProjects.filter((project) => ['cougar-crossing', 'starrboard'].includes(project.slug));
 const earlierProjects = otherProjects.filter((project) => !['cougar-crossing', 'starrboard'].includes(project.slug));
+const capabilities = [
+  { step: '01', title: 'Discover', items: ['Customer problems', 'Product research', 'Feedback synthesis', 'Problem definition'] },
+  { step: '02', title: 'Design', items: ['Information architecture', 'Prototyping', 'Feature prioritization', 'Product strategy'] },
+  { step: '03', title: 'Build', items: ['Web products', 'AI workflows', 'API integrations', 'React & TypeScript'] },
+  { step: '04', title: 'Improve', items: ['Testing & iteration', 'Technical troubleshooting', 'Process improvement', 'Data analysis'] },
+];
+const productTools = ['Codex', 'Google Antigravity', 'React', 'TypeScript', 'Next.js', 'Supabase', 'GitHub', 'HubSpot'];
 ---
 
 <BaseLayout title="Product Management & Tech Startups" bodyClass="portfolio-v2" description="Lot Holmstead is a BYU Information Systems student pursuing product management and tech startup roles. Explore his products, technical projects, experience, and resume.">
-  <section class="intro-v2">
+  <section class="editorial-hero">
     <div class="container">
-      <div class="intro-layout">
-        <div class="intro-main">
-          <h1>Lot Holmstead</h1>
-          <div class="intro-position"><p class="intro-program">BYU Information Systems student building software products with AI.</p><p class="intro-focus">Product management <span aria-hidden="true">/</span> Customer problems <span aria-hidden="true">/</span> Tech startups</p></div>
-          <div class="intro-bottom"><p>SEEKING <strong>Product management &amp; tech startup roles</strong></p><p>GRADUATING <strong>April 2028</strong></p></div>
-          <a class="button button-primary intro-contact-button" href="/#contact">Contact Me</a>
+      <div class="hero-grid-lines" aria-hidden="true"></div>
+      <div class="editorial-hero-grid">
+        <div class="editorial-hero-copy">
+          <p class="hero-name">LOT HOLMSTEAD <span>—</span> PRODUCT BUILDER</p>
+          <h1>I turn customer problems into useful digital products.</h1>
+          <p class="hero-deck">BYU Information Systems student working at the intersection of product management, AI, and technology startups.</p>
+          <div class="hero-actions"><a class="button button-primary" href="/#projects">Explore selected work <span aria-hidden="true">↓</span></a><a class="hero-text-link" href="/resume/">View resume →</a></div>
+          <div class="hero-meta"><p><span>SEEKING</span>Product management &amp; tech startup roles</p><p><span>GRADUATING</span>April 2028</p><p><span>BASED IN</span>Orem, Utah</p></div>
           <div class="intro-profile-links" aria-label="Resume and professional profiles"><a href="/resume/" aria-label="View my resume" title="Resume"><ProfileIcon name="resume" /></a><a href={profile.links.linkedin} target="_blank" rel="noreferrer" aria-label="Visit my LinkedIn profile (opens in a new tab)" title="LinkedIn"><ProfileIcon name="linkedin" /></a><a href={profile.links.github} target="_blank" rel="noreferrer" aria-label="Visit my GitHub profile (opens in a new tab)" title="GitHub"><ProfileIcon name="github" /></a></div>
         </div>
-        <figure class="intro-portrait"><img src="/images/lot-headshot.webp" srcset="/images/lot-headshot-480.webp 480w, /images/lot-headshot-720.jpg 720w, /images/lot-headshot.webp 1000w" sizes="350px" alt="Professional portrait of Lot Holmstead." width="1000" height="1500" fetchpriority="high" decoding="async" /></figure>
+        <figure class="editorial-portrait"><span class="portrait-index" aria-hidden="true">01 / 07</span><div class="portrait-frame"><img src="/images/lot-headshot.webp" srcset="/images/lot-headshot-480.webp 480w, /images/lot-headshot-720.jpg 720w, /images/lot-headshot.webp 1000w" sizes="(max-width: 760px) calc(100vw - 72px), 390px" alt="Professional portrait of Lot Holmstead." width="1000" height="1500" fetchpriority="high" decoding="async" /></div><figcaption><span>PRODUCT / TECHNOLOGY / STARTUPS</span><strong>Building with curiosity and intent.</strong></figcaption></figure>
       </div>
     </div>
   </section>
 
-  <section class="projects-intro" id="projects" aria-labelledby="projects-title"><div class="container"><p class="section-kicker">SELECTED WORK</p><div><h2 id="projects-title">Products shaped by real problems.</h2><p>Projects where I defined the need, designed the experience, and helped turn an idea into something people can use.</p></div></div></section>
+  <section class="projects-intro" id="projects" aria-labelledby="projects-title"><div class="container"><p class="section-kicker"><span>01</span> SELECTED WORK</p><div><h2 id="projects-title">Products shaped by real problems.</h2><p>Projects where I defined the need, designed the experience, and helped turn an idea into something people can use.</p></div></div></section>
   <section class="flagship-section">
     <div class="container">
       <div class="work-section-label"><span>FEATURED PROJECT</span><span>FOUNDER · DEVELOPER</span></div>
       <a class="flagship-image-link" href="https://tyholmstead.com" target="_blank" rel="noreferrer" aria-label="View Ty Holmstead’s live athlete website (opens in a new tab)"><div class="flagship-browser"><span class="browser-dots" aria-hidden="true">● ● ●</span><span>tyholmstead.com</span><span>LIVE ATHLETE WEBSITE ↗</span></div><FlagshipVisual image="/images/projects/notawalkon.webp" imageSmall="/images/projects/notawalkon-720.webp" /></a>
+      <div class="flagship-detail-crops" aria-label="Selected interface details from the athlete website"><figure><img src="/images/projects/notawalkon.webp" alt="Athlete website film and coach controls." width="1440" height="1000" loading="lazy" /><figcaption>01 / FILM ACCESS</figcaption></figure><figure><img src="/images/projects/notawalkon.webp" alt="Athlete profile and recruiting story design." width="1440" height="1000" loading="lazy" /><figcaption>02 / ATHLETE STORY</figcaption></figure><figure><img src="/images/projects/notawalkon.webp" alt="Athletic statistics and recruiting information." width="1440" height="1000" loading="lazy" /><figcaption>03 / COACH VIEW</figcaption></figure></div>
       <div class="flagship-description">
         <div><h2>Custom Athlete<br />Websites</h2><div class="flagship-skills"><h3>Skills</h3><div class="tag-list" aria-label="Skills used in Custom Athlete Websites">{flagship.tags.map(tag=><span>{tag}</span>)}</div></div></div>
         <div><p class="flagship-summary">Custom recruiting websites with athletic stats, highlight film, schedules, and coach contact information in one shareable profile.</p><dl class="flagship-facts"><div><dt>Role</dt><dd>Founder &amp; Developer</dd></div><div><dt>Built for</dt><dd>High school athletes</dd></div><div><dt>Focus</dt><dd>Product design &amp; web development</dd></div></dl><div class="flagship-actions"><a class="button button-primary flagship-visit" href="https://tyholmstead.com" target="_blank" rel="noreferrer">View live website <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2-2v-5" /></svg><span class="sr-only"> (opens in a new tab)</span></a><a class="button button-secondary" href="/projects/athlete-recruiting-platform/">View product case study →</a></div></div>
       </div>
+      <ol class="project-journey"><li><span>01 / Problem</span><p>Athletes and families need one clear place to present film, statistics, schedules, and contact information.</p></li><li><span>02 / Product decision</span><p>Replace scattered links and documents with a focused, shareable recruiting story designed around a coach’s questions.</p></li><li><span>03 / Shipped</span><p>A live athlete website with film access, key numbers, schedule information, coach view, and recruiting contact.</p></li></ol>
     </div>
   </section>
 
@@ -49,7 +60,7 @@ const earlierProjects = otherProjects.filter((project) => !['cougar-crossing', '
 
   <section class="experience-v2" id="experience">
     <div class="container">
-      <div class="work-section-label"><span>EXPERIENCE</span><a href="/resume/">FULL RESUME ↗</a></div>
+      <div class="experience-heading"><div><p class="section-kicker"><span>02</span> EXPERIENCE</p><h2>Where I’ve worked<br />and learned.</h2></div><a href="/resume/">FULL RESUME ↗</a></div>
       <div class="experience-v2-list">
         <article><div class="experience-date">MAR 2026 — OCT 2026</div><div><h3>Business Development &amp; Customer Success</h3><p class="experience-company">EZsalt · SaaS startup</p><p>Supported about 100 customer accounts and built AI-assisted HubSpot workflows for research, meeting preparation, and follow-up.</p><div class="experience-results"><span><strong>75%</strong> of follow-up workflows automated</span><span><strong>1+ hour</strong> saved daily across a three-person team</span></div></div></article>
         <article><div class="experience-date">SEP 2026 — PRESENT</div><div><h3>Teaching Assistant</h3><p class="experience-company">IS 581: Managing a Software Startup · BYU</p><p>Review student projects and help develop a classroom simulation that teaches validated learning through startup decisions.</p></div></article>
@@ -59,7 +70,21 @@ const earlierProjects = otherProjects.filter((project) => !['cougar-crossing', '
     </div>
   </section>
 
-  <section class="toolkit-v2"><div class="container"><div class="toolkit-layout"><div><p class="section-kicker">CAPABILITIES</p><h2>Skills</h2></div><div class="skills-cards">{skills.map(group=><article><h3>{group.title}</h3><div class="skill-chip-list">{group.items.map(item=><span>{item}</span>)}</div></article>)}</div></div><div class="credential-v2"><div><span>Certification</span><strong>Professional Scrum Master I (PSM I)</strong><small>Scrum.org · October 2026</small></div><a href="/resume/">View on resume →</a></div></div></section>
+  <section class="toolkit-v2"><div class="container"><div class="capability-heading"><p class="section-kicker"><span>03</span> CAPABILITIES</p><h2>How I move a product forward.</h2></div><div class="capability-matrix">{capabilities.map(column=><article><span>{column.step}</span><h3>{column.title}</h3><ul>{column.items.map(item=><li>{item}</li>)}</ul></article>)}</div><div class="tool-rail"><span>TOOLS I WORK WITH</span><div>{productTools.map(tool=><span>{tool}</span>)}</div></div><div class="credential-v2"><div><span>Certification</span><strong>Professional Scrum Master I (PSM I)</strong><small>Scrum.org · October 2026</small></div><a href="/resume/">View on resume →</a></div></div></section>
   <AboutSection />
   <ContactForm />
+  <script>
+    document.documentElement.classList.add('motion-ready');
+    const targets = document.querySelectorAll('main > section, .project-card, .experience-v2-list article, .flagship-detail-crops figure');
+    targets.forEach((target) => target.classList.add('reveal-target'));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
+    targets.forEach((target) => observer.observe(target));
+  </script>
 </BaseLayout>

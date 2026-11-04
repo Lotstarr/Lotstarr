@@ -12,10 +12,11 @@ const statusClass = project.status.toLowerCase().replace(' ', '-');
 const responsiveImage = project.evidence?.image.replace(/\.webp$/, '-720.webp');
 ---
 
-<article class:list={['project-card', { large }] }>
+<article class:list={['project-card', `project-${project.slug}`, { large }]}>
   {project.evidence && (
     <a class="project-screenshot" href={`/projects/${project.slug}/`} aria-label={`Explore ${project.title}`}>
       <img src={project.evidence.image} srcset={`${responsiveImage} 720w, ${project.evidence.image} 1440w`} sizes="(max-width: 760px) calc(100vw - 56px), (max-width: 1240px) calc(50vw - 76px), 580px" alt={project.evidence.imageAlt} width="1440" height="1000" loading="lazy" decoding="async" />
+      <span class="project-visual-label" aria-hidden="true">{project.slug === 'cougar-crossing' ? 'PLAY / BUILD / ITERATE' : project.slug === 'starrboard' ? 'PLAN / PRIORITIZE / FOCUS' : 'PROJECT ARCHIVE'}</span>
     </a>
   )}
   <div class="project-body">
