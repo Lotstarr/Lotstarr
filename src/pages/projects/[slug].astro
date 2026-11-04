@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Callout from '../../components/Callout.astro';
 import { projects } from '../../data/projects';
 
 export function getStaticPaths() {
@@ -42,7 +41,7 @@ const sections = [
     <div class="container">
       <figure class="project-figure">
         <img src={evidence.image} alt={evidence.imageAlt} width="1440" height="1000" decoding="async" />
-        <figcaption>Screenshot captured October 27, 2026.{project.demoLabel === 'Fictional demo' && ' All records shown are fictional.'}</figcaption>
+        <figcaption>Product interface shown for portfolio review.{project.demoLabel === 'Fictional demo' && ' All records shown are fictional.'}</figcaption>
       </figure>
       <div class="evidence-sections">
         {sections.map(([heading, body]) => (
@@ -52,7 +51,10 @@ const sections = [
           </section>
         ))}
       </div>
+      <nav class="project-end-nav" aria-label="Project navigation">
+        <a href="/#projects">← Back to selected work</a>
+        <a href="/#contact">Discuss this project →</a>
+      </nav>
     </div>
   </section>
-  <Callout eyebrow="Discuss the work" title="Want to talk through a project?" body="I’m happy to explain the implementation, tradeoffs, and what I would test next." />
 </BaseLayout>

@@ -234,13 +234,10 @@ p { margin: 0 0 1rem; }
 .resume-toolbar span, .resume-toolbar strong { display: block; }
 .resume-toolbar span { color: var(--blue); font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; }
 .resume-toolbar strong { margin-top: 3px; color: var(--navy); font-size: .9rem; }
-.resume-toolbar-actions { display: flex; gap: 24px; }
-.resume-toolbar a { color: var(--blue); font-weight: 700; font-size: .82rem; }
 .resume-preview { padding: 32px; border: 1px solid var(--border); background: #dfe6f0; box-shadow: 0 28px 70px rgba(0,38,87,.12); }
 .resume-preview a { position: relative; display: block; max-width: 850px; margin: 0 auto; background: #fff; box-shadow: 0 18px 45px rgba(0,38,87,.16); }
 .resume-preview img { display: block; width: 100%; height: auto; }
 .resume-preview span { position: absolute; right: 18px; bottom: 18px; padding: 10px 14px; background: rgba(0,38,87,.94); color: #fff; font-size: .72rem; font-weight: 700; letter-spacing: .03em; }
-.resume-contact-strip { display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; padding: 22px; border: 1px solid var(--border); border-top: 0; border-radius: 0 0 12px 12px; background: #fff; color: var(--blue); font-weight: 700; font-size: .82rem; }
 
 .contact-grid { display: grid; grid-template-columns: .78fr 1.22fr; gap: 80px; }
 .contact-copy > p:not(.eyebrow) { color: var(--slate); }
@@ -280,9 +277,10 @@ p { margin: 0 0 1rem; }
 .simple-hero .hero-details { display: grid; gap: 8px; margin-top: 20px; }
 .project-screenshot { display: block; overflow: hidden; border-bottom: 1px solid var(--border); background: var(--blue-light); }
 .project-screenshot img { width: 100%; height: auto; aspect-ratio: 1440 / 1000; object-fit: cover; }
-.project-hero { text-align: left; }
+.project-hero { padding-bottom: 38px !important; text-align: left; }
 .project-hero .eyebrow { margin-top: 26px; }
 .project-hero .page-intro { margin-inline: 0; }
+.project-evidence { padding-top: 42px; }
 .project-figure { max-width: 1000px; margin: 0 auto 64px; }
 .project-figure img { width: 100%; height: auto; border: 1px solid var(--border); border-radius: var(--radius); }
 .project-figure figcaption { margin-top: 12px; color: var(--slate); font-size: .85rem; }
@@ -290,6 +288,7 @@ p { margin: 0 0 1rem; }
 .evidence-sections section { display: grid; grid-template-columns: 220px 1fr; gap: 32px; padding: 30px 0; border-top: 1px solid var(--border); }
 .evidence-sections h2 { font-size: 1.35rem; }
 .evidence-sections p { margin: 0; color: var(--slate); }
+.project-end-nav { display: flex; justify-content: space-between; gap: 24px; max-width: 850px; margin: 54px auto 0; padding-top: 24px; border-top: 1px solid var(--border); color: var(--blue); font-size: .86rem; font-weight: 700; }
 .simple-hero .hero-intro { max-width: 720px; }
 .hero-details { display: flex; flex-wrap: wrap; gap: 8px 24px; max-width: 760px; margin: 24px 0 0; padding-top: 18px; border-top: 1px solid var(--border); color: var(--slate); font-size: .93rem; }
 .hero-details span { display: inline-flex; gap: 5px; }
@@ -432,7 +431,6 @@ p { margin: 0 0 1rem; }
   .project-legend { justify-content: flex-start; flex-wrap: wrap; }
   .resume-intro { padding: 52px 0 42px; }
   .resume-intro-grid { grid-template-columns: 1fr; gap: 34px; }
-  .resume-toolbar { align-items: start; flex-direction: column; gap: 10px; }
   .field-row { grid-template-columns: 1fr; gap: 0; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 42px; }
   .footer-grid > div:first-child { grid-column: 1 / -1; }
@@ -459,9 +457,10 @@ p { margin: 0 0 1rem; }
   .resume-intro h1 { font-size: clamp(2.8rem, 13vw, 4rem); }
   .resume-document-section { padding: 20px 0 70px; }
   .resume-toolbar { border-radius: 10px 10px 0 0; }
-  .resume-toolbar-actions { width: 100%; justify-content: space-between; }
   .resume-preview { padding: 10px; }
   .resume-preview span { right: 8px; bottom: 8px; padding: 8px 10px; font-size: .62rem; }
+  .project-hero { padding-bottom: 28px !important; }
+  .project-evidence { padding-top: 28px; }
 }
 
 @media (max-width: 480px) {
@@ -475,7 +474,7 @@ p { margin: 0 0 1rem; }
   .project-body { padding: 24px; }
   .project-meta { align-items: start; flex-direction: column; }
   .callout-actions .button { width: 100%; }
-  .resume-contact-strip { align-items: center; flex-direction: column; gap: 10px; }
+  .project-end-nav { align-items: flex-start; flex-direction: column; }
   .contact-form { padding: 24px; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-grid > div:first-child { grid-column: auto; }

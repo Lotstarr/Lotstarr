@@ -26,20 +26,12 @@ import { profile } from '../data/profile';
     <div class="container resume-document-container">
       <div class="resume-toolbar">
         <div><span id="resume-document-title">LOT HOLMSTEAD</span><strong>Professional resume · One page</strong></div>
-        <div class="resume-toolbar-actions"><a href={profile.resumeUrl} download>Download ↓</a><a href={profile.resumeUrl} target="_blank" rel="noreferrer">Open full screen ↗</a></div>
       </div>
       <div class="resume-preview">
         <a href={profile.resumeUrl} target="_blank" rel="noreferrer" aria-label="Open Lot Holmstead’s resume as a full-screen PDF">
           <img src="/images/resume-preview.jpg" alt="Preview of Lot Holmstead’s one-page resume." width="1020" height="1320" />
           <span>Open full-screen PDF ↗</span>
         </a>
-      </div>
-      <div class="resume-contact-strip">
-        <a href={`mailto:${profile.email}`}>{profile.email}</a>
-        <a href={`tel:${profile.phoneHref}`}>{profile.phone}</a>
-        <a href={profile.links.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a>
-        <a href={profile.links.github} target="_blank" rel="noreferrer">GitHub ↗</a>
-        <a href={profile.links.handshake} target="_blank" rel="noreferrer">Handshake ↗</a>
       </div>
     </div>
   </section>

@@ -1,277 +1,118 @@
-%PDF-1.3
-%âãÏÓ
+%PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
 <<
-/Producer (pypdf)
-/Title (Lot Holmstead Resume)
-/Author (Lot Holmstead)
-/Subject (Product\054 technology startup\054 and software project resume)
+/F1 2 0 R /F2 3 0 R /F3 4 0 R /F4 9 0 R
 >>
 endobj
 2 0 obj
 <<
-/Type /Pages
-/Count 1
-/Kids [ 4 0 R ]
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
 >>
 endobj
 3 0 obj
 <<
-/Type /Catalog
-/Pages 2 0 R
+/BaseFont /Times-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
 >>
 endobj
 4 0 obj
 <<
-/Type /Page
-/Contents 5 0 R
-/MediaBox [ 0 0 612 792 ]
-/Resources <<
-/Font <<
-/F1 6 0 R
-/F1-0 7 0 R
-/F2 8 0 R
-/F2-0 9 0 R
-/F3 10 0 R
-/hebo 11 0 R
-/helv 12 0 R
->>
-/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
->>
-/Rotate 0
-/Trans <<
->>
-/Annots [ 13 0 R 14 0 R 15 0 R 16 0 R ]
-/Parent 2 0 R
+/BaseFont /Times-Roman /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
 >>
 endobj
 5 0 obj
 <<
-/Length 6555
+/A <<
+/S /URI /Type /Action /URI (mailto:lotstarr@gmail.com)
+>> /Border [ 0 0 0 ] /Rect [ 194.157 732.4 266.193 743.2 ] /Subtype /Link /Type /Annot
 >>
-stream
-q
-q BT/F2 18 Tf 243.495 748 TD (Lot Holmstead)Tj ET BT/F1 9 Tf 224.0505 715 TD (linkedin.com/in/lot-h | github.com/Lotstarr)Tj ET BT/F2 9.5 Tf 40 698 TD (SUMMARY)Tj ET .6 w 40 695 m 572 695 l S BT/F2 9.5 Tf 40 644.5 TD (EDUCATION)Tj ET 40 641.5 m 572 641.5 l S BT/F2 9.5 Tf 40 630.5 TD (Bachelor of Science in Information Systems)Tj ET BT/F1 9.5 Tf 491.2025 630.5 TD (Expected Apr 2028)Tj ET BT/F3 9 Tf 40 619 TD (Brigham Young University - Marriott School of Business | Provo, Utah | GPA: 3.62 | Association for Information Systems)Tj ET BT/F2 9.5 Tf 40 603 TD (EXPERIENCE)Tj ET 40 600 m 572 600 l S BT/F1 9.5 Tf 484.8755 589 TD (Mar 2026 - Oct 2026)Tj ET BT/F3 9 Tf 40 577.5 TD (EZsalt - SaaS startup)Tj ET BT/F1 9 Tf 43 566.5 TD (-)Tj ET BT 52 566.5 TD (Supported about 100 customer accounts through weekly check-ins, product questions, and technical troubleshooting to help)Tj ET BT/F1 9 Tf 52 555.5 TD (customers keep using and renewing their plans.)Tj ET BT/F1 9 Tf 43 543 TD (-)Tj ET BT 52 543 TD (Coordinated customer training meetings and worked with customer success management to address concerns and reach)Tj ET BT/F1 9 Tf 52 532 TD (solutions.)Tj ET BT/F1 9 Tf 43 519.5 TD (-)Tj ET BT 52 519.5 TD (Automated 75% of follow-up workflows in HubSpot, improving CRM consistency and cutting repetitive admin.)Tj ET BT/F1 9 Tf 43 507 TD (-)Tj ET BT 52 507 TD (Cut meeting prep from 5-10 minutes to 1-2 minutes with AI research and recap workflows, saving 1+ hour daily across a)Tj ET BT/F1 9 Tf 52 496 TD (three-person sales team.)Tj ET BT/F1 9 Tf 43 483.5 TD (-)Tj ET BT 52 483.5 TD (Researched 300+ prospect accounts weekly with AI-assisted tools and generated an average of 2 meetings daily through calls,)Tj ET BT/F1 9 Tf 52 472.5 TD (visits, and email sequences.)Tj ET BT/F2 9.5 Tf 40 460 TD (Teaching Assistant - IS 581: Managing a Software Startup)Tj ET BT/F1 9.5 Tf 490.148 460 TD (Sep 2026 - Present)Tj ET BT/F3 9 Tf 40 448.5 TD (Brigham Young University - Marriott School of Business)Tj ET BT/F1 9 Tf 43 437.5 TD (-)Tj ET BT 52 437.5 TD (Review student projects, give feedback, and grade coursework on managing a software startup.)Tj ET BT/F1 9 Tf 43 425 TD (-)Tj ET BT 52 425 TD (Help develop a Software Startup Simulation that teaches validated learning through product, technical, marketing, and resource)Tj ET BT/F1 9 Tf 52 414 TD (decisions.)Tj ET BT/F2 9.5 Tf 40 396.5 TD (SELECTED PROJECTS)Tj ET 40 393.5 m 572 393.5 l S Q q 0 0 0 rg 0 0 0 RG BT/helv 9 Tf 169.6275 727 TD[(Orem, Utah | 435-255-2229 | lotstarr@gmail.com | lotholmstead.com)]TJ ET Q q 1 1 1 rg 1 1 1 RG 35 202 545 191 re B Q q BT/hebo 9.5 Tf 40 386 TD[(Starrboard - Developer \(public demo: github.com/Lotstarr/starrboard-demo\))]TJ ET Q q BT/helv 9 Tf 550 386 TD[(2026)]TJ ET Q q BT/helv 9 Tf 42 374 TD[(- AI-assisted command center for school deadlines, reading plans, and tasks. Developed a private app with API integrations)]TJ ET Q q BT/helv 9 Tf 52 363 TD[(and a separate public fictional demo using Next.js, React, and TypeScript; demo uses browser-local data.)]TJ ET Q q BT/hebo 9.5 Tf 40 351 TD[(Custom Athlete Websites - Founder \(tyholmstead.com\))]TJ ET Q q BT/helv 9 Tf 550 351 TD[(2026)]TJ ET Q q BT/helv 9 Tf 42 339 TD[(- Building recruiting websites for high-school athletes with stats, highlight film, schedules, and coach contact information.)]TJ ET Q q BT/hebo 9.5 Tf 40 327 TD[(Cougar Crossing - Developer \(lotholmstead.com/projects/cougar-crossing/\))]TJ ET Q q BT/helv 9 Tf 550 327 TD[(2026)]TJ ET Q q BT/helv 9 Tf 42 315 TD[(- Built and deployed a BYU-themed browser game with a rendered field, keyboard and on-screen controls, and yard tracking.)]TJ ET Q q BT/helv 9 Tf 52 304 TD[(Uses Canvas and Socket.IO; multiplayer synchronization still needs testing.)]TJ ET Q q BT/hebo 9.5 Tf 40 292 TD[(Personal Portfolio Website - Developer \(lotholmstead.com\))]TJ ET Q q BT/helv 9 Tf 550 292 TD[(2026)]TJ ET Q q BT/helv 9 Tf 42 280 TD[(- Designed, built, and deployed a responsive Astro site with GitHub Actions, GitHub Pages, a custom domain, and a contact form.)]TJ ET Q q 0 0 0 rg 0 0 0 RG BT/hebo 9.5 Tf 40 251.5 TD[(SKILLS)]TJ ET Q q 0 0 0 rg 0 0 0 RG BT/hebo 9.5 Tf 40 199.5 TD[(LEADERSHIP AND SERVICE)]TJ ET Q q 0 0 0 rg 0 0 0 RG BT/hebo 9.5 Tf 40 185.5 TD[(Full-Time Missionary - The Church of Jesus Christ of Latter-day Saints, Philippines)]TJ ET Q q 0 0 0 rg 0 0 0 RG BT/helv 9.5 Tf 482.2155 185.5 TD[(Aug 2022 - Aug 2024)]TJ ET Q q 0 0 0 rg 0 0 0 RG BT/helv 9 Tf 43 174 TD[(-)]TJ ET Q q 0 0 0 rg 0 0 0 RG BT/helv 9 Tf 45.997 174 TD[( )]TJ ET Q q 0 0 0 rg 0 0 0 RG BT/helv 9 Tf 52 174 TD[(Learned Tagalog, trained and led other missionaries, and built cross-cultural communication, resilience, and self-direction.)]TJ ET Q q 0 0 0 RG .5 w 40 248.5 m 572 248.5 l S Q q 0 0 0 RG .5 w 40 196.5 m 572 196.5 l S Q q 1 1 1 rg 1 1 1 RG 39 658 534 36 re B Q q 1 1 1 rg 1 1 1 RG 39 210 534 38.200014 re B Q q BT/helv 9 Tf 40 684 TD[(Information Systems student at BYU building web projects with AI coding tools, including React, Supabase, and Vercel.)]TJ ET Q q BT/helv 9 Tf 40 673 TD[(Projects include athlete websites, an academic dashboard, and a browser game. IS 581 teaching assistant with experience)]TJ ET Q q BT/helv 9 Tf 40 662 TD[(automating workflows and supporting customers at a SaaS startup.)]TJ ET Q q BT/hebo 9 Tf 40 237 TD[(Development: )]TJ ET Q q BT/helv 9 Tf 102.01 237 TD[(React, JavaScript, TypeScript, Next.js, Supabase, Vercel, HTML, CSS, Python, SQL, GitHub, API integrations)]TJ ET Q q BT/hebo 9 Tf 40 226 TD[(AI tools: )]TJ ET Q q BT/helv 9 Tf 78.502 226 TD[(Codex, Google Antigravity, AI-assisted development, workflow automation)]TJ ET Q q BT/hebo 9 Tf 40 215 TD[(Customer and business: )]TJ ET Q q BT/helv 9 Tf 147.523 215 TD[(Customer training, technical troubleshooting, HubSpot, business process analysis, Excel, data analysis)]TJ ET Q
-
-q
-39 588 341 11.5 re
-h
-1 1 1 RG 1 1 1 rg B
-Q
-
-q
-BT
-1 0 0 1 40 589 Tm
-/hebo 9.5 Tf [<427573696e65737320446576656c6f706d656e7420616e6420437573746f6d65722053756363657373>]TJ
-ET
-Q
-
-q
-40 600 m
-572 600 l
-.5 w
-0 0 0 RG S
-Q
-
-Q
-q
-0.0 0.0 612 792 re
-W
-n
-1 0 0 1 0 0 cm
-BT
-/F1-0 12 Tf
-14.4 TL
-ET
-0 0 0 rg
-BT
-/F2-0 9.5 Tf
-11.4 TL
-ET
-BT
-1 0 0 1 40 148 Tm
-(CERTIFICATIONS) Tj
-T*
-ET
-0.466667 0.466667 0.466667 RG
-0.6 w
-n
-40 145 m
-572 145 l
-S
-BT
-/F2-0 9.2 Tf
-11.04 TL
-ET
-BT
-1 0 0 1 40 131 Tm
-(Professional Scrum Master I \050PSM I\051) Tj
-T*
-ET
-BT
-/F1-0 8.25 Tf
-9.9 TL
-ET
-BT
-1 0 0 1 538.5215 131 Tm
-(Oct 2026) Tj
-T*
-ET
-BT
-/F1-0 8.25 Tf
-9.9 TL
-ET
-BT
-1 0 0 1 40 119 Tm
-(Scrum\056org) Tj
-T*
-ET
-Q
-
-endstream
 endobj
 6 0 obj
 <<
-/Type /Font
-/Subtype /Type1
-/BaseFont /Helvetica
-/Encoding /WinAnsiEncoding
-/Name /F1
+/A <<
+/S /URI /Type /Action /URI (https://linkedin.com/in/lot-h)
+>> /Border [ 0 0 0 ] /Rect [ 329.787 732.4 362.781 743.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
 7 0 obj
 <<
-/BaseFont /Helvetica
-/Encoding /WinAnsiEncoding
-/Name /F1
-/Subtype /Type1
-/Type /Font
+/A <<
+/S /URI /Type /Action /URI (https://github.com/Lotstarr)
+>> /Border [ 0 0 0 ] /Rect [ 369.081 732.4 396.081 743.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
 8 0 obj
 <<
-/Type /Font
-/Subtype /Type1
-/BaseFont /Helvetica-Bold
-/Encoding /WinAnsiEncoding
-/Name /F2
+/A <<
+/S /URI /Type /Action /URI (https://lotholmstead.com)
+>> /Border [ 0 0 0 ] /Rect [ 402.381 732.4 466.632 743.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
 9 0 obj
 <<
-/BaseFont /Helvetica-Bold
-/Encoding /WinAnsiEncoding
-/Name /F2
-/Subtype /Type1
-/Type /Font
+/BaseFont /Times-Italic /Encoding /WinAnsiEncoding /Name /F4 /Subtype /Type1 /Type /Font
 >>
 endobj
 10 0 obj
 <<
-/Type /Font
-/Subtype /Type1
-/BaseFont /Helvetica-Oblique
-/Encoding /WinAnsiEncoding
-/Name /F3
+/Annots [ 5 0 R 6 0 R 7 0 R 8 0 R ] /Contents 14 0 R /MediaBox [ 0 0 612 792 ] /Parent 13 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 
+  /Trans <<
+
+>> /Type /Page
 >>
 endobj
 11 0 obj
 <<
-/Type /Font
-/Subtype /Type1
-/BaseFont /Helvetica-Bold
-/Encoding /WinAnsiEncoding
+/PageMode /UseNone /Pages 13 0 R /Type /Catalog
 >>
 endobj
 12 0 obj
 <<
-/Type /Font
-/Subtype /Type1
-/BaseFont /Helvetica
-/Encoding /WinAnsiEncoding
+/Author (\(anonymous\)) /CreationDate (D:20261104195010+00'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20261104195010+00'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (\(unspecified\)) /Title (\(anonymous\)) /Trapped /False
 >>
 endobj
 13 0 obj
 <<
-/A <<
-/S /URI
-/URI (https\072\057\057github\056com\057Lotstarr\057starrboard\055demo)
->>
-/Rect [ 40 384 382.0475 396 ]
-/BS <<
-/W 0
->>
-/Subtype /Link
-/NM (fitz\055L0)
+/Count 1 /Kids [ 10 0 R ] /Type /Pages
 >>
 endobj
 14 0 obj
 <<
-/A <<
-/S /URI
-/URI (https\072\057\057tyholmstead\056com)
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 3257
 >>
-/Rect [ 40 349 290.724 361 ]
-/BS <<
-/W 0
->>
-/Subtype /Link
-/NM (fitz\055L1)
->>
-endobj
-15 0 obj
-<<
-/A <<
-/S /URI
-/URI (https\072\057\057lotholmstead\056com\057projects\057cougar\055crossing\057)
->>
-/Rect [ 40 325 381.012 337 ]
-/BS <<
-/W 0
->>
-/Subtype /Link
-/NM (fitz\055L2)
->>
-endobj
-16 0 obj
-<<
-/A <<
-/S /URI
-/URI (https\072\057\057lotholmstead\056com)
->>
-/Rect [ 40 290 305.525 302 ]
-/BS <<
-/W 0
->>
-/Subtype /Link
-/NM (fitz\055L3)
->>
+stream
+Gb!;f>Bedl&q801W0c=OAcO'4CZ]1_+UM;A&.?g%p>i&%25"&L1YjW&p?[jtYB9qWXNfCM-ZaZO,?3srWikfk9?X%FI]W1F(D34al0PfHQ;-rS=m]gjk#32E?i9c;asET2p"Gt6%<6dM9#$Y7(O4:Va26:;`j*YNVW7<n.(2!H=r=b<F.[2GU$8Zb,GdElJ"ZTRRf>p<4#32s,C]&UmF]D-pLgj:K;R,bB2;`tRIojR6NaZL@\Hcu+F-qa/'V,e?V4t6KgI<7V#:*F@R8Z=7$N*1J[X$AfH'nDp7RYB#4W/s-ZLT#I<ZFh\&n<ZQPb'LkZNp^FM5$7Hb.qXeT*-]FY`XV<7--mB'B`d:9&R+o#'dulV9XV+&:!@feYL+%qMjr/r#^bMBs<NPgsSoZ;ic/*P057GI\Yt^3L<g+!Tulc2Wm\qch_?g#WJM\5,'T*sXlrqN#K8X\If/O:frmLrnJiTTLFp';*=6R&9IN=+=.jJSbgKf&V--+[QeL3_r]dF/A(Ycmr;)fN/Lj_8!.`%!_,Y$=`Q=V+&<KWPnBN>c1dLD\f%V/Z_fZ#pds`l\%Q;/VTgA]!2fkR/>t9%1gE=_KqY-kKI-6nWK8;!LsO5`9M'r;Q"HH`%ki29Q-+F(Aa=g:+fdJ-gQ)e:.ADBmtN+^K_1s.\W4I=*%\P\ED.o4k1n"/4TWAA`X6_'P<u7g,)JIh?l"n<@:DF#D"6+K&Gejm_b,gY$5S<9L1<P@6au@m#&[K;6FZ!>48E)CFF<"hYHC@43?5DP0!!ZPP1r"Q@Xrm19A+4/bO0=T`erY=F8Kj$/q`8C7J'.s0^i!]Cq*GqhGU,k3?Qc,l*m.7PS4#r9'uc#C0=9/P7pW,-H/Gb]XLBsHP5Ga+-.8bDP,!pm/uAL2#raqVK'9^SO]@1UnL]'$aMEaC`O181E4%RVqJI"p>k+?iOd;#3R*jg(jHHQnMGJu\<^[7m!`[2IBa$ZCj`nG.BNF]3;mVN^7:/>O2dH0C,sPTPBaahn!>8h(f:Hf^Y1DY8n+QI[,$\J:B7,ldtFIk('D<`B=mfh`h*d5:9VfghNt?2;lA51Q/rM62#asnTg"%j%slK,l1lrAD@sQSA*cif)P^f/`n6ciMsN6hpo[>7DZADTp!VMIqQZ;iSS"c>j<0_,PP&*M"'2j"W;@K`2L)`c:huC(0[BiTCD.\a8<td;jno<L?mtK@&XZ+XVZ?@)_UVt3e_FBJJVQ4bnK\18!o</ng?uh&KW!:DX%b\]BphI;O81@8.fuoZRGE4=RuN<t!`gggKH):oNFEL_7R<;N7W='K9*hDob[GBXOi`&s$=bZDq7\]CH3.n9A!PdLOeB&rmMG+\[:)n;*&W]R44rXC5LbEj<X;uXS\LPr[1FLe`^[6d1Iu(D(b,W3/TdPhI5a&'?!\AE9n%m`\'=T#6^aF,Y@1:fli@<J?t9FFVjD#J8h7:GK0R.7&m[Ht@):HjK8@uC$3Uqd)?^cfc'?t$X'q?]L>%tNS3UH#RIjOj'g/p;^H*g0>0Qi"<[*[eUJ-<RdNk/]kp?B[k7+6[$>9M4RHZ\hWf>PW^h$8TXNOjOG`C0erFC.@RI"A&3B>]ep_cgF=VUu-/6t1m>(S26l?E`eJKtnj1B(qTYaCiXTJ,e3W9U4a2?C,3S?TN&HV&5H(bf'OYr4B-kDB(I%5f\OW;<t;:aa<c:pTfKA[mA6n$7J3ESO[bP.a$+WjpZ(#1&M:S>[R8db_o0g-$.D:.N6hHkZ#(Z6K??I0$(J+MC(c9FI*,f-mUSQX<@>msm<q\02alAOJVX;MA&Kbc.TcdJ<rcR(#1_(HmNu-m1I)Ot`qkdct-X1k?5t/.DH@2aVI[)S?H4aO?RR/qL">-LrL[PBtNu$7>@h8L$Fn5U;VG)(9M$c7o\iU7([l4IWn4;jArO`t^L-[s+peq/*o0U7>L=f=J#QfdV1uR"RDMkEB]1+$?%Tc,_\@hJW*N&gs>0b8rLPAT`'lQFV(;MT;74d:Vn::Le\?a5td;a`4C,?.ICjofNOI;mG29jOie>+Nadj+ZD;"%$e*%c^>jn'!@]\3:5.r6WOs=9\lY>$fmfH&)7@.+PIMcH,_P-+Qq7%.8p9rah23i!4d)[kiRFRMNbiN78S(4NMGSqfmE]u2nrbK9+Zm(k+6MCh">3^f%E1;'%n.hNDQ!O#HYclH.&toc\&=#0gJ+>$;k*V5P[/<T#h2G7sjd`)l-ZnkCM,uA-Dm1!G)eq7fdbD8:Ot<Y#-Oe,Y1RggL?'MN`J\q)EF0ejo`-0R80Q?"gON/^ds1SeaWSmWZ1T(p^2;,1J]-"Ref^qrILiO\QJ+UG2ITm(IuDUP");O1.iRY1S#6ed$^4m2S<;cloXld]0#dd"VQ0+$Ms+?`#L\;6a9A=s8:>G6a(`fMk#iBa\[?Ia%2@4N8s%Ei1XMU)nsR;%Ps'"JJ/aBEU)a#[:SLu>9f4N5\6iepfkb"&W8S!X$L%M+ZX@655\)F2KaO([5EB(D<rFBN._.@q.Ge45i@_se**dNcgH>X[.p&c>lmErR?2_<_E\fDiZ=>u=2<Ij58R^2rFZTSYIFq*0o+5Ij3BcBfg?7^EGbPj)bra(n#(:);qtnrq)%a7[VgOWA'6\mj?66.7DsfU4IDDM_M!fhEldMV*cn\Q4K+!(o>rYLq..-"`\.hqs%:`Bg%"R^psORPR8pGkpVbO/l[dO`'6K"1S49QtZjap*hJnf/>Y??ok'G0,ZKd1j[cCnQ9Y@""JhU<19k&O.K-C[6(4[GQ9@G)jWBp@#p?n/Y:Tt2_<k!3$9-0s]8JjAJVHnN\-r\;F\U>CGX`j`sRfTG*qU@>XJEf.!Z;<+<g!KrK_H_os+E`@7W6d4Ho"86OQ+]!4+cmu_J\`%6M<TV&YC(jOi'4)'RQ[Qn\7kX<EmX*Id(g!Qrg4KJ%U[QXa(.65m!VuZmqH]3=KU0%,Np[#WJIGI6'sB#d6W/JYJ/Yf)H\s`a@.S?*X"2#i%=6QqY_)(qST4Ep"a&6.67,l)1V=(\8-(##7.\`Ff-_`kk?Tfh]GgGmnikp`d-tLNbqm!2qRe=kk_I%G*=eqAdY^6$^X<fH98m/enO3V+Kd<e&U9uGEEWL>qL^*ndC88LO&9^QTt*1#\?FFRq"uY.,/c6)k_sY7<GV`MXl&A^m(Es1jg:T8A);MK*QGS3q;h2oH]b6>,G!*n?[QOrT"DB>F=haW>?DJPhM<eO10pX]IBLiM$^uJBTq:(S$425&^713'JmS?c5)Pg[~>endstream
 endobj
 xref
-0 17
+0 15
 0000000000 65535 f 
-0000000015 00000 n 
-0000000182 00000 n 
-0000000241 00000 n 
-0000000290 00000 n 
-0000000600 00000 n 
-0000007207 00000 n 
-0000007314 00000 n 
-0000007421 00000 n 
-0000007533 00000 n 
-0000007645 00000 n 
-0000007761 00000 n 
-0000007864 00000 n 
-0000007962 00000 n 
-0000008150 00000 n 
-0000008308 00000 n 
-0000008505 00000 n 
+0000000061 00000 n 
+0000000122 00000 n 
+0000000229 00000 n 
+0000000337 00000 n 
+0000000446 00000 n 
+0000000615 00000 n 
+0000000788 00000 n 
+0000000959 00000 n 
+0000001127 00000 n 
+0000001237 00000 n 
+0000001469 00000 n 
+0000001539 00000 n 
+0000001820 00000 n 
+0000001881 00000 n 
 trailer
 <<
-/Size 17
-/Root 3 0 R
-/Info 1 0 R
+/ID 
+[<3401fa5fd63867afc414b4887d8f6b96><3401fa5fd63867afc414b4887d8f6b96>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 12 0 R
+/Root 11 0 R
+/Size 15
 >>
 startxref
-8664
+5230
 %%EOF
